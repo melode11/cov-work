@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		81B596D6174C64DC00E50482 /* FileTunnel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 81B596D5174C64DC00E50482 /* FileTunnel.h */; };
+		81B596D8174C64DC00E50482 /* FileTunnel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B596D7174C64DC00E50482 /* FileTunnel.m */; };
+		81B596E0174C64DC00E50482 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B596DF174C64DC00E50482 /* SenTestingKit.framework */; };
+		81B596E3174C64DC00E50482 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B596D0174C64DC00E50482 /* Foundation.framework */; };
+		81B596E6174C64DC00E50482 /* libFileTunnel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B596CD174C64DC00E50482 /* libFileTunnel.a */; };
+		81B596EC174C64DC00E50482 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B596EA174C64DC00E50482 /* InfoPlist.strings */; };
+		81B596EF174C64DC00E50482 /* FileTunnelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B596EE174C64DC00E50482 /* FileTunnelTests.m */; };
+		81B59826174CC76700E50482 /* Pods.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 81B59825174CC76700E50482 /* Pods.xcconfig */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		810285CA179E457600227AFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810285C5179E457600227AFD /* Utilities.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 81B59772174C653100E50482;
+			remoteInfo = Utilities;
+		};
+		810285CC179E457600227AFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810285C5179E457600227AFD /* Utilities.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 81B59783174C653100E50482;
+			remoteInfo = UtilitiesTests;
+		};
+		810285CE179E458100227AFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810285C5179E457600227AFD /* Utilities.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 81B59771174C653100E50482;
+			remoteInfo = Utilities;
+		};
+		81B596E4174C64DC00E50482 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81B596C5174C64DC00E50482 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81B596CC174C64DC00E50482;
+			remoteInfo = FileTunnel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		81B596CB174C64DC00E50482 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				81B596D6174C64DC00E50482 /* FileTunnel.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		810285C5179E457600227AFD /* Utilities.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Utilities.xcodeproj; path = ../Utilities/Utilities.xcodeproj; sourceTree = "<group>"; };
+		81B596CD174C64DC00E50482 /* libFileTunnel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFileTunnel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		81B596D0174C64DC00E50482 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		81B596D4174C64DC00E50482 /* FileTunnel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FileTunnel-Prefix.pch"; sourceTree = "<group>"; };
+		81B596D5174C64DC00E50482 /* FileTunnel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileTunnel.h; sourceTree = "<group>"; };
+		81B596D7174C64DC00E50482 /* FileTunnel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileTunnel.m; sourceTree = "<group>"; };
+		81B596DE174C64DC00E50482 /* FileTunnelTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileTunnelTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81B596DF174C64DC00E50482 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		81B596E9174C64DC00E50482 /* FileTunnelTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FileTunnelTests-Info.plist"; sourceTree = "<group>"; };
+		81B596EB174C64DC00E50482 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		81B596ED174C64DC00E50482 /* FileTunnelTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileTunnelTests.h; sourceTree = "<group>"; };
+		81B596EE174C64DC00E50482 /* FileTunnelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileTunnelTests.m; sourceTree = "<group>"; };
+		81B59825174CC76700E50482 /* Pods.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81B596DA174C64DC00E50482 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81B596E0174C64DC00E50482 /* SenTestingKit.framework in Frameworks */,
+				81B596E3174C64DC00E50482 /* Foundation.framework in Frameworks */,
+				81B596E6174C64DC00E50482 /* libFileTunnel.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		810285C6179E457600227AFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				810285CB179E457600227AFD /* libUtilities.a */,
+				810285CD179E457600227AFD /* UtilitiesTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81B596C4174C64DC00E50482 = {
+			isa = PBXGroup;
+			children = (
+				81B596D2174C64DC00E50482 /* FileTunnel */,
+				81B596E7174C64DC00E50482 /* FileTunnelTests */,
+				81B596CF174C64DC00E50482 /* Frameworks */,
+				81B596CE174C64DC00E50482 /* Products */,
+				81B59825174CC76700E50482 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		81B596CE174C64DC00E50482 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81B596CD174C64DC00E50482 /* libFileTunnel.a */,
+				81B596DE174C64DC00E50482 /* FileTunnelTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81B596CF174C64DC00E50482 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				810285C5179E457600227AFD /* Utilities.xcodeproj */,
+				81B596D0174C64DC00E50482 /* Foundation.framework */,
+				81B596DF174C64DC00E50482 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81B596D2174C64DC00E50482 /* FileTunnel */ = {
+			isa = PBXGroup;
+			children = (
+				81B596D5174C64DC00E50482 /* FileTunnel.h */,
+				81B596D7174C64DC00E50482 /* FileTunnel.m */,
+				81B596D3174C64DC00E50482 /* Supporting Files */,
+			);
+			path = FileTunnel;
+			sourceTree = "<group>";
+		};
+		81B596D3174C64DC00E50482 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				81B596D4174C64DC00E50482 /* FileTunnel-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81B596E7174C64DC00E50482 /* FileTunnelTests */ = {
+			isa = PBXGroup;
+			children = (
+				81B596ED174C64DC00E50482 /* FileTunnelTests.h */,
+				81B596EE174C64DC00E50482 /* FileTunnelTests.m */,
+				81B596E8174C64DC00E50482 /* Supporting Files */,
+			);
+			path = FileTunnelTests;
+			sourceTree = "<group>";
+		};
+		81B596E8174C64DC00E50482 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				81B596E9174C64DC00E50482 /* FileTunnelTests-Info.plist */,
+				81B596EA174C64DC00E50482 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81B596CC174C64DC00E50482 /* FileTunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81B596F2174C64DC00E50482 /* Build configuration list for PBXNativeTarget "FileTunnel" */;
+			buildPhases = (
+				81B596C9174C64DC00E50482 /* Sources */,
+				81B596CB174C64DC00E50482 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				810285CF179E458100227AFD /* PBXTargetDependency */,
+			);
+			name = FileTunnel;
+			productName = FileTunnel;
+			productReference = 81B596CD174C64DC00E50482 /* libFileTunnel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		81B596DD174C64DC00E50482 /* FileTunnelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81B596F5174C64DC00E50482 /* Build configuration list for PBXNativeTarget "FileTunnelTests" */;
+			buildPhases = (
+				81B596D9174C64DC00E50482 /* Sources */,
+				81B596DA174C64DC00E50482 /* Frameworks */,
+				81B596DB174C64DC00E50482 /* Resources */,
+				81B596DC174C64DC00E50482 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81B596E5174C64DC00E50482 /* PBXTargetDependency */,
+			);
+			name = FileTunnelTests;
+			productName = FileTunnelTests;
+			productReference = 81B596DE174C64DC00E50482 /* FileTunnelTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81B596C5174C64DC00E50482 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Shanghai;
+			};
+			buildConfigurationList = 81B596C8174C64DC00E50482 /* Build configuration list for PBXProject "FileTunnel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 81B596C4174C64DC00E50482;
+			productRefGroup = 81B596CE174C64DC00E50482 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 810285C6179E457600227AFD /* Products */;
+					ProjectRef = 810285C5179E457600227AFD /* Utilities.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				81B596CC174C64DC00E50482 /* FileTunnel */,
+				81B596DD174C64DC00E50482 /* FileTunnelTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		810285CB179E457600227AFD /* libUtilities.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUtilities.a;
+			remoteRef = 810285CA179E457600227AFD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		810285CD179E457600227AFD /* UtilitiesTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UtilitiesTests.octest;
+			remoteRef = 810285CC179E457600227AFD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81B596DB174C64DC00E50482 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81B596EC174C64DC00E50482 /* InfoPlist.strings in Resources */,
+				81B59826174CC76700E50482 /* Pods.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81B596DC174C64DC00E50482 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81B596C9174C64DC00E50482 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81B596D8174C64DC00E50482 /* FileTunnel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81B596D9174C64DC00E50482 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81B596EF174C64DC00E50482 /* FileTunnelTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		810285CF179E458100227AFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Utilities;
+			targetProxy = 810285CE179E458100227AFD /* PBXContainerItemProxy */;
+		};
+		81B596E5174C64DC00E50482 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81B596CC174C64DC00E50482 /* FileTunnel */;
+			targetProxy = 81B596E4174C64DC00E50482 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		81B596EA174C64DC00E50482 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81B596EB174C64DC00E50482 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		81B596F0174C64DC00E50482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81B59825174CC76700E50482 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		81B596F1174C64DC00E50482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81B59825174CC76700E50482 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		81B596F3174C64DC00E50482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				DSTROOT = /tmp/FileTunnel.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FileTunnel/FileTunnel-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		81B596F4174C64DC00E50482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				DSTROOT = /tmp/FileTunnel.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FileTunnel/FileTunnel-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		81B596F6174C64DC00E50482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FileTunnel/FileTunnel-Prefix.pch";
+				INFOPLIST_FILE = "FileTunnelTests/FileTunnelTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		81B596F7174C64DC00E50482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FileTunnel/FileTunnel-Prefix.pch";
+				INFOPLIST_FILE = "FileTunnelTests/FileTunnelTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81B596C8174C64DC00E50482 /* Build configuration list for PBXProject "FileTunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81B596F0174C64DC00E50482 /* Debug */,
+				81B596F1174C64DC00E50482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81B596F2174C64DC00E50482 /* Build configuration list for PBXNativeTarget "FileTunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81B596F3174C64DC00E50482 /* Debug */,
+				81B596F4174C64DC00E50482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81B596F5174C64DC00E50482 /* Build configuration list for PBXNativeTarget "FileTunnelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81B596F6174C64DC00E50482 /* Debug */,
+				81B596F7174C64DC00E50482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81B596C5174C64DC00E50482 /* Project object */;
+}

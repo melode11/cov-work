@@ -1,0 +1,12 @@
+workspace './services.xcworkspace'
+
+platform :ios
+
+pod 'ASIHTTPRequest', '~>1.8' 
+pod 'TomFastMath', :podspec => './TomFastMath.podspec'
+pod 'TomCrypt', :podspec => './TomCrypt.podspec'
+#pod 'XMPPFramework', :podspec=> './XMPPFramework.podspec'
+pod 'SBJson', '~>3'
+pod 'UrbanAirship-iOS-SDK','~>1.3' 
+pod 'CocoaLumberjack'
+pod 'socket.IO'

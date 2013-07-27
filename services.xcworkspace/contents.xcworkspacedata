@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:HelpSource_Application/HelpSource_Application.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Utilities/Utilities.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Notification/Notification.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FileTunnel/FileTunnel.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Messaging/Messaging.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Annotation/Annotation.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:DataPersist/DataPersist.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:VoipEngine/VoipEngine.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ServerAgents/ServerAgents.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

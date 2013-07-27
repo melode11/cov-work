@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8124E0C01779866E00A0AFD7 /* LAStyleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CF78D21779863A00FB0DFD /* LAStyleManager.m */; };
+		8124E0C11779866E00A0AFD7 /* LAUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CF78CF1779862000FB0DFD /* LAUtilities.m */; };
+		8124E124177ABF1900A0AFD7 /* CompatibilityManager+Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8124E123177ABF1800A0AFD7 /* CompatibilityManager+Annotation.m */; };
+		8124E143177BD06D00A0AFD7 /* LAAnnotationDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 8124E142177BD06D00A0AFD7 /* LAAnnotationDispatcher.m */; };
+		8124E144177BD75400A0AFD7 /* LAAnnotationDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 8124E142177BD06D00A0AFD7 /* LAAnnotationDispatcher.m */; };
+		818A4213177976E00015431F /* LABitmapDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41FD177976E00015431F /* LABitmapDrawingView.m */; };
+		818A4214177976E00015431F /* LADrawingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41FF177976E00015431F /* LADrawingController.m */; };
+		818A4215177976E00015431F /* NSString+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4202177976E00015431F /* NSString+Color.m */; };
+		818A4217177976E00015431F /* LAAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4207177976E00015431F /* LAAnnotation.m */; };
+		818A4218177976E00015431F /* LAArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4209177976E00015431F /* LAArrow.m */; };
+		818A4219177976E00015431F /* LACircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A420B177976E00015431F /* LACircle.m */; };
+		818A421B177976E00015431F /* LATextAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4210177976E00015431F /* LATextAnnotation.m */; };
+		818A4220177977870015431F /* HPAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A421D177977860015431F /* HPAnnotation.m */; };
+		818A4221177977870015431F /* HPPathAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A421F177977860015431F /* HPPathAnnotation.m */; };
+		81B595F4174C639F00E50482 /* LAAttribute.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 81B595F3174C639F00E50482 /* LAAttribute.h */; };
+		81B595F6174C639F00E50482 /* LAAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B595F5174C639F00E50482 /* LAAttribute.m */; };
+		81B595FE174C639F00E50482 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B595FD174C639F00E50482 /* SenTestingKit.framework */; };
+		81B59601174C639F00E50482 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B595EE174C639F00E50482 /* Foundation.framework */; };
+		81B59604174C639F00E50482 /* libAnnotation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B595EB174C639F00E50482 /* libAnnotation.a */; };
+		81B5960A174C639F00E50482 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B59608174C639F00E50482 /* InfoPlist.strings */; };
+		81B5960D174C639F00E50482 /* AnnotationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B5960C174C639F00E50482 /* AnnotationTests.m */; };
+		81B5982C174CC79C00E50482 /* Pods.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 81B5982B174CC79C00E50482 /* Pods.xcconfig */; };
+		81CF78C517797F6200FB0DFD /* HPAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A421D177977860015431F /* HPAnnotation.m */; };
+		81CF78C617797F6200FB0DFD /* HPPathAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A421F177977860015431F /* HPPathAnnotation.m */; };
+		81CF78C717797F6200FB0DFD /* LABitmapDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41FD177976E00015431F /* LABitmapDrawingView.m */; };
+		81CF78C817797F6200FB0DFD /* LADrawingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41FF177976E00015431F /* LADrawingController.m */; };
+		81CF78C917797F6200FB0DFD /* NSString+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4202177976E00015431F /* NSString+Color.m */; };
+		81CF78CA17797F6200FB0DFD /* LAAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4207177976E00015431F /* LAAnnotation.m */; };
+		81CF78CB17797F6200FB0DFD /* LAArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4209177976E00015431F /* LAArrow.m */; };
+		81CF78CC17797F6200FB0DFD /* LACircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A420B177976E00015431F /* LACircle.m */; };
+		81CF78CD17797F6200FB0DFD /* LATextAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4210177976E00015431F /* LATextAnnotation.m */; };
+		81CF78D01779862000FB0DFD /* LAUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CF78CF1779862000FB0DFD /* LAUtilities.m */; };
+		81CF78D31779863A00FB0DFD /* LAStyleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CF78D21779863A00FB0DFD /* LAStyleManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		810285E0179E45E300227AFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810285DB179E45E300227AFD /* Utilities.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 81B59772174C653100E50482;
+			remoteInfo = Utilities;
+		};
+		810285E2179E45E300227AFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810285DB179E45E300227AFD /* Utilities.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 81B59783174C653100E50482;
+			remoteInfo = UtilitiesTests;
+		};
+		810285E4179E45EB00227AFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810285DB179E45E300227AFD /* Utilities.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 81B59771174C653100E50482;
+			remoteInfo = Utilities;
+		};
+		81B59602174C639F00E50482 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81B595E3174C639F00E50482 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81B595EA174C639F00E50482;
+			remoteInfo = Annotation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		81B595E9174C639F00E50482 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				81B595F4174C639F00E50482 /* LAAttribute.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		810285DB179E45E300227AFD /* Utilities.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Utilities.xcodeproj; path = ../Utilities/Utilities.xcodeproj; sourceTree = "<group>"; };
+		8124E122177ABF1800A0AFD7 /* CompatibilityManager+Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CompatibilityManager+Annotation.h"; sourceTree = "<group>"; };
+		8124E123177ABF1800A0AFD7 /* CompatibilityManager+Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CompatibilityManager+Annotation.m"; sourceTree = "<group>"; };
+		8124E141177BD06D00A0AFD7 /* LAAnnotationDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAAnnotationDispatcher.h; sourceTree = "<group>"; };
+		8124E142177BD06D00A0AFD7 /* LAAnnotationDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAAnnotationDispatcher.m; sourceTree = "<group>"; };
+		818A41FC177976E00015431F /* LABitmapDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LABitmapDrawingView.h; sourceTree = "<group>"; };
+		818A41FD177976E00015431F /* LABitmapDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LABitmapDrawingView.m; sourceTree = "<group>"; };
+		818A41FE177976E00015431F /* LADrawingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LADrawingController.h; sourceTree = "<group>"; };
+		818A41FF177976E00015431F /* LADrawingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LADrawingController.m; sourceTree = "<group>"; };
+		818A4201177976E00015431F /* NSString+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Color.h"; sourceTree = "<group>"; };
+		818A4202177976E00015431F /* NSString+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Color.m"; sourceTree = "<group>"; };
+		818A4206177976E00015431F /* LAAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAAnnotation.h; sourceTree = "<group>"; };
+		818A4207177976E00015431F /* LAAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAAnnotation.m; sourceTree = "<group>"; };
+		818A4208177976E00015431F /* LAArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAArrow.h; sourceTree = "<group>"; };
+		818A4209177976E00015431F /* LAArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAArrow.m; sourceTree = "<group>"; };
+		818A420A177976E00015431F /* LACircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LACircle.h; sourceTree = "<group>"; };
+		818A420B177976E00015431F /* LACircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LACircle.m; sourceTree = "<group>"; };
+		818A420F177976E00015431F /* LATextAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LATextAnnotation.h; sourceTree = "<group>"; };
+		818A4210177976E00015431F /* LATextAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LATextAnnotation.m; sourceTree = "<group>"; };
+		818A421C177977850015431F /* HPAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPAnnotation.h; sourceTree = "<group>"; };
+		818A421D177977860015431F /* HPAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPAnnotation.m; sourceTree = "<group>"; };
+		818A421E177977860015431F /* HPPathAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPPathAnnotation.h; sourceTree = "<group>"; };
+		818A421F177977860015431F /* HPPathAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPPathAnnotation.m; sourceTree = "<group>"; };
+		818A422217797E010015431F /* LVConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LVConstants.h; sourceTree = "<group>"; };
+		81B595EB174C639F00E50482 /* libAnnotation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAnnotation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		81B595EE174C639F00E50482 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		81B595F2174C639F00E50482 /* Annotation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Annotation-Prefix.pch"; sourceTree = "<group>"; };
+		81B595F3174C639F00E50482 /* LAAttribute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LAAttribute.h; sourceTree = "<group>"; };
+		81B595F5174C639F00E50482 /* LAAttribute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAAttribute.m; sourceTree = "<group>"; };
+		81B595FC174C639F00E50482 /* AnnotationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnnotationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81B595FD174C639F00E50482 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		81B59607174C639F00E50482 /* AnnotationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AnnotationTests-Info.plist"; sourceTree = "<group>"; };
+		81B59609174C639F00E50482 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		81B5960B174C639F00E50482 /* AnnotationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnnotationTests.h; sourceTree = "<group>"; };
+		81B5960C174C639F00E50482 /* AnnotationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnnotationTests.m; sourceTree = "<group>"; };
+		81B5982B174CC79C00E50482 /* Pods.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods.xcconfig; sourceTree = "<group>"; };
+		81CF78CE1779862000FB0DFD /* LAUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAUtilities.h; sourceTree = "<group>"; };
+		81CF78CF1779862000FB0DFD /* LAUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAUtilities.m; sourceTree = "<group>"; };
+		81CF78D11779863A00FB0DFD /* LAStyleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAStyleManager.h; sourceTree = "<group>"; };
+		81CF78D21779863A00FB0DFD /* LAStyleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAStyleManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81B595F8174C639F00E50482 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81B595FE174C639F00E50482 /* SenTestingKit.framework in Frameworks */,
+				81B59601174C639F00E50482 /* Foundation.framework in Frameworks */,
+				81B59604174C639F00E50482 /* libAnnotation.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		810285DC179E45E300227AFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				810285E1179E45E300227AFD /* libUtilities.a */,
+				810285E3179E45E300227AFD /* UtilitiesTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		818A41F6177976E00015431F /* Drawings */ = {
+			isa = PBXGroup;
+			children = (
+				818A421C177977850015431F /* HPAnnotation.h */,
+				818A421D177977860015431F /* HPAnnotation.m */,
+				818A421E177977860015431F /* HPPathAnnotation.h */,
+				818A421F177977860015431F /* HPPathAnnotation.m */,
+				818A41FC177976E00015431F /* LABitmapDrawingView.h */,
+				818A41FD177976E00015431F /* LABitmapDrawingView.m */,
+				818A41FE177976E00015431F /* LADrawingController.h */,
+				818A41FF177976E00015431F /* LADrawingController.m */,
+				818A4200177976E00015431F /* Tools */,
+			);
+			path = Drawings;
+			sourceTree = "<group>";
+		};
+		818A4200177976E00015431F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				818A4201177976E00015431F /* NSString+Color.h */,
+				818A4202177976E00015431F /* NSString+Color.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		818A4205177976E00015431F /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				818A4206177976E00015431F /* LAAnnotation.h */,
+				818A4207177976E00015431F /* LAAnnotation.m */,
+				818A4208177976E00015431F /* LAArrow.h */,
+				818A4209177976E00015431F /* LAArrow.m */,
+				818A420A177976E00015431F /* LACircle.h */,
+				818A420B177976E00015431F /* LACircle.m */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		818A420C177976E00015431F /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				818A420F177976E00015431F /* LATextAnnotation.h */,
+				818A4210177976E00015431F /* LATextAnnotation.m */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		81B595E2174C639F00E50482 = {
+			isa = PBXGroup;
+			children = (
+				81B595F0174C639F00E50482 /* Annotation */,
+				81B59605174C639F00E50482 /* AnnotationTests */,
+				81B595ED174C639F00E50482 /* Frameworks */,
+				81B595EC174C639F00E50482 /* Products */,
+				81B5982B174CC79C00E50482 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		81B595EC174C639F00E50482 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81B595EB174C639F00E50482 /* libAnnotation.a */,
+				81B595FC174C639F00E50482 /* AnnotationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81B595ED174C639F00E50482 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				810285DB179E45E300227AFD /* Utilities.xcodeproj */,
+				81B595EE174C639F00E50482 /* Foundation.framework */,
+				81B595FD174C639F00E50482 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81B595F0174C639F00E50482 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				8124E141177BD06D00A0AFD7 /* LAAnnotationDispatcher.h */,
+				8124E142177BD06D00A0AFD7 /* LAAnnotationDispatcher.m */,
+				81CF78D11779863A00FB0DFD /* LAStyleManager.h */,
+				81CF78D21779863A00FB0DFD /* LAStyleManager.m */,
+				81CF78CE1779862000FB0DFD /* LAUtilities.h */,
+				81CF78CF1779862000FB0DFD /* LAUtilities.m */,
+				818A422217797E010015431F /* LVConstants.h */,
+				818A41F6177976E00015431F /* Drawings */,
+				818A4205177976E00015431F /* Objects */,
+				818A420C177976E00015431F /* Text */,
+				81B595F3174C639F00E50482 /* LAAttribute.h */,
+				81B595F5174C639F00E50482 /* LAAttribute.m */,
+				81B595F1174C639F00E50482 /* Supporting Files */,
+				8124E122177ABF1800A0AFD7 /* CompatibilityManager+Annotation.h */,
+				8124E123177ABF1800A0AFD7 /* CompatibilityManager+Annotation.m */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
+		81B595F1174C639F00E50482 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				81B595F2174C639F00E50482 /* Annotation-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81B59605174C639F00E50482 /* AnnotationTests */ = {
+			isa = PBXGroup;
+			children = (
+				81B5960B174C639F00E50482 /* AnnotationTests.h */,
+				81B5960C174C639F00E50482 /* AnnotationTests.m */,
+				81B59606174C639F00E50482 /* Supporting Files */,
+			);
+			path = AnnotationTests;
+			sourceTree = "<group>";
+		};
+		81B59606174C639F00E50482 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				81B59607174C639F00E50482 /* AnnotationTests-Info.plist */,
+				81B59608174C639F00E50482 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81B595EA174C639F00E50482 /* Annotation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81B59610174C639F00E50482 /* Build configuration list for PBXNativeTarget "Annotation" */;
+			buildPhases = (
+				81B595E7174C639F00E50482 /* Sources */,
+				81B595E9174C639F00E50482 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				810285E5179E45EB00227AFD /* PBXTargetDependency */,
+			);
+			name = Annotation;
+			productName = Annotation;
+			productReference = 81B595EB174C639F00E50482 /* libAnnotation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		81B595FB174C639F00E50482 /* AnnotationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81B59613174C639F00E50482 /* Build configuration list for PBXNativeTarget "AnnotationTests" */;
+			buildPhases = (
+				81B595F7174C639F00E50482 /* Sources */,
+				81B595F8174C639F00E50482 /* Frameworks */,
+				81B595F9174C639F00E50482 /* Resources */,
+				81B595FA174C639F00E50482 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81B59603174C639F00E50482 /* PBXTargetDependency */,
+			);
+			name = AnnotationTests;
+			productName = AnnotationTests;
+			productReference = 81B595FC174C639F00E50482 /* AnnotationTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81B595E3174C639F00E50482 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Shanghai;
+			};
+			buildConfigurationList = 81B595E6174C639F00E50482 /* Build configuration list for PBXProject "Annotation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 81B595E2174C639F00E50482;
+			productRefGroup = 81B595EC174C639F00E50482 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 810285DC179E45E300227AFD /* Products */;
+					ProjectRef = 810285DB179E45E300227AFD /* Utilities.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				81B595EA174C639F00E50482 /* Annotation */,
+				81B595FB174C639F00E50482 /* AnnotationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		810285E1179E45E300227AFD /* libUtilities.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUtilities.a;
+			remoteRef = 810285E0179E45E300227AFD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		810285E3179E45E300227AFD /* UtilitiesTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UtilitiesTests.octest;
+			remoteRef = 810285E2179E45E300227AFD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81B595F9174C639F00E50482 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81B5960A174C639F00E50482 /* InfoPlist.strings in Resources */,
+				81B5982C174CC79C00E50482 /* Pods.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81B595FA174C639F00E50482 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81B595E7174C639F00E50482 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8124E144177BD75400A0AFD7 /* LAAnnotationDispatcher.m in Sources */,
+				8124E0C01779866E00A0AFD7 /* LAStyleManager.m in Sources */,
+				8124E0C11779866E00A0AFD7 /* LAUtilities.m in Sources */,
+				81CF78C517797F6200FB0DFD /* HPAnnotation.m in Sources */,
+				81CF78C617797F6200FB0DFD /* HPPathAnnotation.m in Sources */,
+				81CF78C717797F6200FB0DFD /* LABitmapDrawingView.m in Sources */,
+				81CF78C817797F6200FB0DFD /* LADrawingController.m in Sources */,
+				81CF78C917797F6200FB0DFD /* NSString+Color.m in Sources */,
+				81CF78CA17797F6200FB0DFD /* LAAnnotation.m in Sources */,
+				81CF78CB17797F6200FB0DFD /* LAArrow.m in Sources */,
+				81CF78CC17797F6200FB0DFD /* LACircle.m in Sources */,
+				81CF78CD17797F6200FB0DFD /* LATextAnnotation.m in Sources */,
+				81B595F6174C639F00E50482 /* LAAttribute.m in Sources */,
+				8124E124177ABF1900A0AFD7 /* CompatibilityManager+Annotation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81B595F7174C639F00E50482 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81B5960D174C639F00E50482 /* AnnotationTests.m in Sources */,
+				818A4213177976E00015431F /* LABitmapDrawingView.m in Sources */,
+				818A4214177976E00015431F /* LADrawingController.m in Sources */,
+				818A4215177976E00015431F /* NSString+Color.m in Sources */,
+				818A4217177976E00015431F /* LAAnnotation.m in Sources */,
+				818A4218177976E00015431F /* LAArrow.m in Sources */,
+				818A4219177976E00015431F /* LACircle.m in Sources */,
+				818A421B177976E00015431F /* LATextAnnotation.m in Sources */,
+				818A4220177977870015431F /* HPAnnotation.m in Sources */,
+				818A4221177977870015431F /* HPPathAnnotation.m in Sources */,
+				81CF78D01779862000FB0DFD /* LAUtilities.m in Sources */,
+				81CF78D31779863A00FB0DFD /* LAStyleManager.m in Sources */,
+				8124E143177BD06D00A0AFD7 /* LAAnnotationDispatcher.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		810285E5179E45EB00227AFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Utilities;
+			targetProxy = 810285E4179E45EB00227AFD /* PBXContainerItemProxy */;
+		};
+		81B59603174C639F00E50482 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81B595EA174C639F00E50482 /* Annotation */;
+			targetProxy = 81B59602174C639F00E50482 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		81B59608174C639F00E50482 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81B59609174C639F00E50482 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		81B5960E174C639F00E50482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81B5982B174CC79C00E50482 /* Pods.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		81B5960F174C639F00E50482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81B5982B174CC79C00E50482 /* Pods.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		81B59611174C639F00E50482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Annotation.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Annotation/Annotation-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../Utilities/Utilities/**";
+			};
+			name = Debug;
+		};
+		81B59612174C639F00E50482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Annotation.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Annotation/Annotation-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../Utilities/Utilities/**";
+			};
+			name = Release;
+		};
+		81B59614174C639F00E50482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Annotation/Annotation-Prefix.pch";
+				INFOPLIST_FILE = "AnnotationTests/AnnotationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		81B59615174C639F00E50482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Annotation/Annotation-Prefix.pch";
+				INFOPLIST_FILE = "AnnotationTests/AnnotationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81B595E6174C639F00E50482 /* Build configuration list for PBXProject "Annotation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81B5960E174C639F00E50482 /* Debug */,
+				81B5960F174C639F00E50482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81B59610174C639F00E50482 /* Build configuration list for PBXNativeTarget "Annotation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81B59611174C639F00E50482 /* Debug */,
+				81B59612174C639F00E50482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81B59613174C639F00E50482 /* Build configuration list for PBXNativeTarget "AnnotationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81B59614174C639F00E50482 /* Debug */,
+				81B59615174C639F00E50482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81B595E3174C639F00E50482 /* Project object */;
+}

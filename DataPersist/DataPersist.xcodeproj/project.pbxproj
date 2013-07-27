@@ -1,0 +1,631 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		818A4182177963920015431F /* AppVersionDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41631779638E0015431F /* AppVersionDAO.m */; };
+		818A4183177963920015431F /* BaseDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41651779638E0015431F /* BaseDAO.m */; };
+		818A4184177963920015431F /* CallHistoryDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41671779638F0015431F /* CallHistoryDAO.m */; };
+		818A4185177963920015431F /* ClientFeatureDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41691779638F0015431F /* ClientFeatureDAO.m */; };
+		818A4186177963920015431F /* CrmodCallerDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A416B1779638F0015431F /* CrmodCallerDAO.m */; };
+		818A4187177963920015431F /* DAOManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A416D177963900015431F /* DAOManager.m */; };
+		818A4188177963920015431F /* SqliteDatabaseWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4171177963900015431F /* SqliteDatabaseWrapper.m */; };
+		818A4189177963920015431F /* PhoneBookDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4174177963900015431F /* PhoneBookDAO.m */; };
+		818A418A177963920015431F /* PListPersistImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4177177963910015431F /* PListPersistImpl.m */; };
+		818A418B177963920015431F /* UserDefaultPersistImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4179177963910015431F /* UserDefaultPersistImpl.m */; };
+		818A418C177963920015431F /* Sa2DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A417B177963910015431F /* Sa2DAO.m */; };
+		818A418D177963920015431F /* SecurityDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A417D177963910015431F /* SecurityDAO.m */; };
+		818A418E177963920015431F /* ServerSettingDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A417F177963910015431F /* ServerSettingDAO.m */; };
+		818A418F177963920015431F /* UserProfileDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4181177963920015431F /* UserProfileDAO.m */; };
+		81B595C0174C637700E50482 /* DataPersist.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 81B595BF174C637700E50482 /* DataPersist.h */; };
+		81B595C2174C637700E50482 /* DataPersist.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B595C1174C637700E50482 /* DataPersist.m */; };
+		81B595CA174C637700E50482 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B595C9174C637700E50482 /* SenTestingKit.framework */; };
+		81B595CD174C637700E50482 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B595BA174C637700E50482 /* Foundation.framework */; };
+		81B595D0174C637700E50482 /* libDataPersist.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B595B7174C637700E50482 /* libDataPersist.a */; };
+		81B595D6174C637700E50482 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B595D4174C637700E50482 /* InfoPlist.strings */; };
+		81B595D9174C637700E50482 /* DataPersistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B595D8174C637700E50482 /* DataPersistTests.m */; };
+		81B5982E174CC7AB00E50482 /* Pods.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 81B5982D174CC7AB00E50482 /* Pods.xcconfig */; };
+		81CB0ED1179F6BFA00425333 /* AppVersionDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41631779638E0015431F /* AppVersionDAO.m */; };
+		81CB0ED2179F6BFA00425333 /* BaseDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41651779638E0015431F /* BaseDAO.m */; };
+		81CB0ED3179F6BFA00425333 /* CallHistoryDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41671779638F0015431F /* CallHistoryDAO.m */; };
+		81CB0ED4179F6BFA00425333 /* ClientFeatureDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41691779638F0015431F /* ClientFeatureDAO.m */; };
+		81CB0ED5179F6BFA00425333 /* CrmodCallerDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A416B1779638F0015431F /* CrmodCallerDAO.m */; };
+		81CB0ED6179F6BFA00425333 /* DAOManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A416D177963900015431F /* DAOManager.m */; };
+		81CB0ED7179F6BFA00425333 /* SqliteDatabaseWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4171177963900015431F /* SqliteDatabaseWrapper.m */; };
+		81CB0ED8179F6BFA00425333 /* PhoneBookDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4174177963900015431F /* PhoneBookDAO.m */; };
+		81CB0ED9179F6BFA00425333 /* PListPersistImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4177177963910015431F /* PListPersistImpl.m */; };
+		81CB0EDA179F6BFA00425333 /* UserDefaultPersistImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4179177963910015431F /* UserDefaultPersistImpl.m */; };
+		81CB0EDB179F6BFA00425333 /* Sa2DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A417B177963910015431F /* Sa2DAO.m */; };
+		81CB0EDC179F6BFA00425333 /* SecurityDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A417D177963910015431F /* SecurityDAO.m */; };
+		81CB0EDD179F6BFA00425333 /* ServerSettingDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A417F177963910015431F /* ServerSettingDAO.m */; };
+		81CB0EDE179F6BFA00425333 /* UserProfileDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4181177963920015431F /* UserProfileDAO.m */; };
+		81CB0EE0179F6C1400425333 /* AppVersionDAO.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A41621779638E0015431F /* AppVersionDAO.h */; };
+		81CB0EE1179F6C1400425333 /* BaseDAO.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A41641779638E0015431F /* BaseDAO.h */; };
+		81CB0EE2179F6C1400425333 /* CallHistoryDAO.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A41661779638F0015431F /* CallHistoryDAO.h */; };
+		81CB0EE3179F6C1400425333 /* ClientFeatureDAO.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A41681779638F0015431F /* ClientFeatureDAO.h */; };
+		81CB0EE4179F6C1400425333 /* CrmodCallerDAO.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A416A1779638F0015431F /* CrmodCallerDAO.h */; };
+		81CB0EE5179F6C1400425333 /* DAOManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A416C177963900015431F /* DAOManager.h */; };
+		81CB0EE6179F6C1400425333 /* SqliteDatabaseWrapper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A4170177963900015431F /* SqliteDatabaseWrapper.h */; };
+		81CB0EE7179F6C1400425333 /* PersistImpl.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A4172177963900015431F /* PersistImpl.h */; };
+		81CB0EE8179F6C1400425333 /* PhoneBookDAO.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A4173177963900015431F /* PhoneBookDAO.h */; };
+		81CB0EE9179F6C1400425333 /* PListPersistImpl.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A4176177963910015431F /* PListPersistImpl.h */; };
+		81CB0EEA179F6C1400425333 /* UserDefaultPersistImpl.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A4178177963910015431F /* UserDefaultPersistImpl.h */; };
+		81CB0EEB179F6C1400425333 /* Sa2DAO.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A417A177963910015431F /* Sa2DAO.h */; };
+		81CB0EEC179F6C1400425333 /* SecurityDAO.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A417C177963910015431F /* SecurityDAO.h */; };
+		81CB0EED179F6C1400425333 /* ServerSettingDAO.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A417E177963910015431F /* ServerSettingDAO.h */; };
+		81CB0EEE179F6C1400425333 /* UserProfileDAO.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A4180177963910015431F /* UserProfileDAO.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		810285EB179E461000227AFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810285E6179E461000227AFD /* Utilities.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 81B59772174C653100E50482;
+			remoteInfo = Utilities;
+		};
+		810285ED179E461000227AFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810285E6179E461000227AFD /* Utilities.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 81B59783174C653100E50482;
+			remoteInfo = UtilitiesTests;
+		};
+		810285EF179E461700227AFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810285E6179E461000227AFD /* Utilities.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 81B59771174C653100E50482;
+			remoteInfo = Utilities;
+		};
+		81B595CE174C637700E50482 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81B595AF174C637700E50482 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81B595B6174C637700E50482;
+			remoteInfo = DataPersist;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		81B595B5174C637700E50482 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				81CB0EE0179F6C1400425333 /* AppVersionDAO.h in CopyFiles */,
+				81CB0EE1179F6C1400425333 /* BaseDAO.h in CopyFiles */,
+				81CB0EE2179F6C1400425333 /* CallHistoryDAO.h in CopyFiles */,
+				81CB0EE3179F6C1400425333 /* ClientFeatureDAO.h in CopyFiles */,
+				81CB0EE4179F6C1400425333 /* CrmodCallerDAO.h in CopyFiles */,
+				81CB0EE5179F6C1400425333 /* DAOManager.h in CopyFiles */,
+				81CB0EE6179F6C1400425333 /* SqliteDatabaseWrapper.h in CopyFiles */,
+				81CB0EE7179F6C1400425333 /* PersistImpl.h in CopyFiles */,
+				81CB0EE8179F6C1400425333 /* PhoneBookDAO.h in CopyFiles */,
+				81CB0EE9179F6C1400425333 /* PListPersistImpl.h in CopyFiles */,
+				81CB0EEA179F6C1400425333 /* UserDefaultPersistImpl.h in CopyFiles */,
+				81CB0EEB179F6C1400425333 /* Sa2DAO.h in CopyFiles */,
+				81CB0EEC179F6C1400425333 /* SecurityDAO.h in CopyFiles */,
+				81CB0EED179F6C1400425333 /* ServerSettingDAO.h in CopyFiles */,
+				81CB0EEE179F6C1400425333 /* UserProfileDAO.h in CopyFiles */,
+				81B595C0174C637700E50482 /* DataPersist.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		810285E6179E461000227AFD /* Utilities.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Utilities.xcodeproj; path = ../Utilities/Utilities.xcodeproj; sourceTree = "<group>"; };
+		818A41621779638E0015431F /* AppVersionDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppVersionDAO.h; sourceTree = "<group>"; };
+		818A41631779638E0015431F /* AppVersionDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppVersionDAO.m; sourceTree = "<group>"; };
+		818A41641779638E0015431F /* BaseDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDAO.h; sourceTree = "<group>"; };
+		818A41651779638E0015431F /* BaseDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDAO.m; sourceTree = "<group>"; };
+		818A41661779638F0015431F /* CallHistoryDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallHistoryDAO.h; sourceTree = "<group>"; };
+		818A41671779638F0015431F /* CallHistoryDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallHistoryDAO.m; sourceTree = "<group>"; };
+		818A41681779638F0015431F /* ClientFeatureDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientFeatureDAO.h; sourceTree = "<group>"; };
+		818A41691779638F0015431F /* ClientFeatureDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientFeatureDAO.m; sourceTree = "<group>"; };
+		818A416A1779638F0015431F /* CrmodCallerDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrmodCallerDAO.h; sourceTree = "<group>"; };
+		818A416B1779638F0015431F /* CrmodCallerDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrmodCallerDAO.m; sourceTree = "<group>"; };
+		818A416C177963900015431F /* DAOManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAOManager.h; sourceTree = "<group>"; };
+		818A416D177963900015431F /* DAOManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAOManager.m; sourceTree = "<group>"; };
+		818A4170177963900015431F /* SqliteDatabaseWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteDatabaseWrapper.h; sourceTree = "<group>"; };
+		818A4171177963900015431F /* SqliteDatabaseWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteDatabaseWrapper.m; sourceTree = "<group>"; };
+		818A4172177963900015431F /* PersistImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistImpl.h; sourceTree = "<group>"; };
+		818A4173177963900015431F /* PhoneBookDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneBookDAO.h; sourceTree = "<group>"; };
+		818A4174177963900015431F /* PhoneBookDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneBookDAO.m; sourceTree = "<group>"; };
+		818A4176177963910015431F /* PListPersistImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PListPersistImpl.h; sourceTree = "<group>"; };
+		818A4177177963910015431F /* PListPersistImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PListPersistImpl.m; sourceTree = "<group>"; };
+		818A4178177963910015431F /* UserDefaultPersistImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultPersistImpl.h; sourceTree = "<group>"; };
+		818A4179177963910015431F /* UserDefaultPersistImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultPersistImpl.m; sourceTree = "<group>"; };
+		818A417A177963910015431F /* Sa2DAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sa2DAO.h; sourceTree = "<group>"; };
+		818A417B177963910015431F /* Sa2DAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sa2DAO.m; sourceTree = "<group>"; };
+		818A417C177963910015431F /* SecurityDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityDAO.h; sourceTree = "<group>"; };
+		818A417D177963910015431F /* SecurityDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityDAO.m; sourceTree = "<group>"; };
+		818A417E177963910015431F /* ServerSettingDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerSettingDAO.h; sourceTree = "<group>"; };
+		818A417F177963910015431F /* ServerSettingDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerSettingDAO.m; sourceTree = "<group>"; };
+		818A4180177963910015431F /* UserProfileDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileDAO.h; sourceTree = "<group>"; };
+		818A4181177963920015431F /* UserProfileDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileDAO.m; sourceTree = "<group>"; };
+		81B595B7174C637700E50482 /* libDataPersist.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDataPersist.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		81B595BA174C637700E50482 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		81B595BE174C637700E50482 /* DataPersist-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DataPersist-Prefix.pch"; sourceTree = "<group>"; };
+		81B595BF174C637700E50482 /* DataPersist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataPersist.h; sourceTree = "<group>"; };
+		81B595C1174C637700E50482 /* DataPersist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataPersist.m; sourceTree = "<group>"; };
+		81B595C8174C637700E50482 /* DataPersistTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataPersistTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81B595C9174C637700E50482 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		81B595D3174C637700E50482 /* DataPersistTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DataPersistTests-Info.plist"; sourceTree = "<group>"; };
+		81B595D5174C637700E50482 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		81B595D7174C637700E50482 /* DataPersistTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataPersistTests.h; sourceTree = "<group>"; };
+		81B595D8174C637700E50482 /* DataPersistTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataPersistTests.m; sourceTree = "<group>"; };
+		81B5982D174CC7AB00E50482 /* Pods.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81B595C4174C637700E50482 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81B595CA174C637700E50482 /* SenTestingKit.framework in Frameworks */,
+				81B595CD174C637700E50482 /* Foundation.framework in Frameworks */,
+				81B595D0174C637700E50482 /* libDataPersist.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		810285E7179E461000227AFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				810285EC179E461000227AFD /* libUtilities.a */,
+				810285EE179E461000227AFD /* UtilitiesTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		818A416F177963900015431F /* DbSupport */ = {
+			isa = PBXGroup;
+			children = (
+				818A4170177963900015431F /* SqliteDatabaseWrapper.h */,
+				818A4171177963900015431F /* SqliteDatabaseWrapper.m */,
+			);
+			path = DbSupport;
+			sourceTree = "<group>";
+		};
+		818A4175177963910015431F /* PListImpl */ = {
+			isa = PBXGroup;
+			children = (
+				818A4176177963910015431F /* PListPersistImpl.h */,
+				818A4177177963910015431F /* PListPersistImpl.m */,
+				818A4178177963910015431F /* UserDefaultPersistImpl.h */,
+				818A4179177963910015431F /* UserDefaultPersistImpl.m */,
+			);
+			path = PListImpl;
+			sourceTree = "<group>";
+		};
+		81B595AE174C637700E50482 = {
+			isa = PBXGroup;
+			children = (
+				81B595BC174C637700E50482 /* DataPersist */,
+				81B595D1174C637700E50482 /* DataPersistTests */,
+				81B595B9174C637700E50482 /* Frameworks */,
+				81B595B8174C637700E50482 /* Products */,
+				81B5982D174CC7AB00E50482 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		81B595B8174C637700E50482 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81B595B7174C637700E50482 /* libDataPersist.a */,
+				81B595C8174C637700E50482 /* DataPersistTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81B595B9174C637700E50482 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				810285E6179E461000227AFD /* Utilities.xcodeproj */,
+				81B595BA174C637700E50482 /* Foundation.framework */,
+				81B595C9174C637700E50482 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81B595BC174C637700E50482 /* DataPersist */ = {
+			isa = PBXGroup;
+			children = (
+				818A41621779638E0015431F /* AppVersionDAO.h */,
+				818A41631779638E0015431F /* AppVersionDAO.m */,
+				818A41641779638E0015431F /* BaseDAO.h */,
+				818A41651779638E0015431F /* BaseDAO.m */,
+				818A41661779638F0015431F /* CallHistoryDAO.h */,
+				818A41671779638F0015431F /* CallHistoryDAO.m */,
+				818A41681779638F0015431F /* ClientFeatureDAO.h */,
+				818A41691779638F0015431F /* ClientFeatureDAO.m */,
+				818A416A1779638F0015431F /* CrmodCallerDAO.h */,
+				818A416B1779638F0015431F /* CrmodCallerDAO.m */,
+				818A416C177963900015431F /* DAOManager.h */,
+				818A416D177963900015431F /* DAOManager.m */,
+				818A416F177963900015431F /* DbSupport */,
+				818A4172177963900015431F /* PersistImpl.h */,
+				818A4173177963900015431F /* PhoneBookDAO.h */,
+				818A4174177963900015431F /* PhoneBookDAO.m */,
+				818A4175177963910015431F /* PListImpl */,
+				818A417A177963910015431F /* Sa2DAO.h */,
+				818A417B177963910015431F /* Sa2DAO.m */,
+				818A417C177963910015431F /* SecurityDAO.h */,
+				818A417D177963910015431F /* SecurityDAO.m */,
+				818A417E177963910015431F /* ServerSettingDAO.h */,
+				818A417F177963910015431F /* ServerSettingDAO.m */,
+				818A4180177963910015431F /* UserProfileDAO.h */,
+				818A4181177963920015431F /* UserProfileDAO.m */,
+				81B595BF174C637700E50482 /* DataPersist.h */,
+				81B595C1174C637700E50482 /* DataPersist.m */,
+				81B595BD174C637700E50482 /* Supporting Files */,
+			);
+			path = DataPersist;
+			sourceTree = "<group>";
+		};
+		81B595BD174C637700E50482 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				81B595BE174C637700E50482 /* DataPersist-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81B595D1174C637700E50482 /* DataPersistTests */ = {
+			isa = PBXGroup;
+			children = (
+				81B595D7174C637700E50482 /* DataPersistTests.h */,
+				81B595D8174C637700E50482 /* DataPersistTests.m */,
+				81B595D2174C637700E50482 /* Supporting Files */,
+			);
+			path = DataPersistTests;
+			sourceTree = "<group>";
+		};
+		81B595D2174C637700E50482 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				81B595D3174C637700E50482 /* DataPersistTests-Info.plist */,
+				81B595D4174C637700E50482 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81B595B6174C637700E50482 /* DataPersist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81B595DC174C637700E50482 /* Build configuration list for PBXNativeTarget "DataPersist" */;
+			buildPhases = (
+				81B595B3174C637700E50482 /* Sources */,
+				81B595B5174C637700E50482 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				810285F0179E461700227AFD /* PBXTargetDependency */,
+			);
+			name = DataPersist;
+			productName = DataPersist;
+			productReference = 81B595B7174C637700E50482 /* libDataPersist.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		81B595C7174C637700E50482 /* DataPersistTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81B595DF174C637700E50482 /* Build configuration list for PBXNativeTarget "DataPersistTests" */;
+			buildPhases = (
+				81B595C3174C637700E50482 /* Sources */,
+				81B595C4174C637700E50482 /* Frameworks */,
+				81B595C5174C637700E50482 /* Resources */,
+				81B595C6174C637700E50482 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81B595CF174C637700E50482 /* PBXTargetDependency */,
+			);
+			name = DataPersistTests;
+			productName = DataPersistTests;
+			productReference = 81B595C8174C637700E50482 /* DataPersistTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81B595AF174C637700E50482 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Shanghai;
+			};
+			buildConfigurationList = 81B595B2174C637700E50482 /* Build configuration list for PBXProject "DataPersist" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 81B595AE174C637700E50482;
+			productRefGroup = 81B595B8174C637700E50482 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 810285E7179E461000227AFD /* Products */;
+					ProjectRef = 810285E6179E461000227AFD /* Utilities.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				81B595B6174C637700E50482 /* DataPersist */,
+				81B595C7174C637700E50482 /* DataPersistTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		810285EC179E461000227AFD /* libUtilities.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUtilities.a;
+			remoteRef = 810285EB179E461000227AFD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		810285EE179E461000227AFD /* UtilitiesTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UtilitiesTests.octest;
+			remoteRef = 810285ED179E461000227AFD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81B595C5174C637700E50482 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81B595D6174C637700E50482 /* InfoPlist.strings in Resources */,
+				81B5982E174CC7AB00E50482 /* Pods.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81B595C6174C637700E50482 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81B595B3174C637700E50482 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81CB0ED1179F6BFA00425333 /* AppVersionDAO.m in Sources */,
+				81CB0ED2179F6BFA00425333 /* BaseDAO.m in Sources */,
+				81CB0ED3179F6BFA00425333 /* CallHistoryDAO.m in Sources */,
+				81CB0ED4179F6BFA00425333 /* ClientFeatureDAO.m in Sources */,
+				81CB0ED5179F6BFA00425333 /* CrmodCallerDAO.m in Sources */,
+				81CB0ED6179F6BFA00425333 /* DAOManager.m in Sources */,
+				81CB0ED7179F6BFA00425333 /* SqliteDatabaseWrapper.m in Sources */,
+				81CB0ED8179F6BFA00425333 /* PhoneBookDAO.m in Sources */,
+				81CB0ED9179F6BFA00425333 /* PListPersistImpl.m in Sources */,
+				81CB0EDA179F6BFA00425333 /* UserDefaultPersistImpl.m in Sources */,
+				81CB0EDB179F6BFA00425333 /* Sa2DAO.m in Sources */,
+				81CB0EDC179F6BFA00425333 /* SecurityDAO.m in Sources */,
+				81CB0EDD179F6BFA00425333 /* ServerSettingDAO.m in Sources */,
+				81CB0EDE179F6BFA00425333 /* UserProfileDAO.m in Sources */,
+				81B595C2174C637700E50482 /* DataPersist.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81B595C3174C637700E50482 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81B595D9174C637700E50482 /* DataPersistTests.m in Sources */,
+				818A4182177963920015431F /* AppVersionDAO.m in Sources */,
+				818A4183177963920015431F /* BaseDAO.m in Sources */,
+				818A4184177963920015431F /* CallHistoryDAO.m in Sources */,
+				818A4185177963920015431F /* ClientFeatureDAO.m in Sources */,
+				818A4186177963920015431F /* CrmodCallerDAO.m in Sources */,
+				818A4187177963920015431F /* DAOManager.m in Sources */,
+				818A4188177963920015431F /* SqliteDatabaseWrapper.m in Sources */,
+				818A4189177963920015431F /* PhoneBookDAO.m in Sources */,
+				818A418A177963920015431F /* PListPersistImpl.m in Sources */,
+				818A418B177963920015431F /* UserDefaultPersistImpl.m in Sources */,
+				818A418C177963920015431F /* Sa2DAO.m in Sources */,
+				818A418D177963920015431F /* SecurityDAO.m in Sources */,
+				818A418E177963920015431F /* ServerSettingDAO.m in Sources */,
+				818A418F177963920015431F /* UserProfileDAO.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		810285F0179E461700227AFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Utilities;
+			targetProxy = 810285EF179E461700227AFD /* PBXContainerItemProxy */;
+		};
+		81B595CF174C637700E50482 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81B595B6174C637700E50482 /* DataPersist */;
+			targetProxy = 81B595CE174C637700E50482 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		81B595D4174C637700E50482 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81B595D5174C637700E50482 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		81B595DA174C637700E50482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81B5982D174CC7AB00E50482 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		81B595DB174C637700E50482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81B5982D174CC7AB00E50482 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		81B595DD174C637700E50482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/DataPersist.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DataPersist/DataPersist-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		81B595DE174C637700E50482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/DataPersist.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DataPersist/DataPersist-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		81B595E0174C637700E50482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DataPersist/DataPersist-Prefix.pch";
+				INFOPLIST_FILE = "DataPersistTests/DataPersistTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		81B595E1174C637700E50482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DataPersist/DataPersist-Prefix.pch";
+				INFOPLIST_FILE = "DataPersistTests/DataPersistTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81B595B2174C637700E50482 /* Build configuration list for PBXProject "DataPersist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81B595DA174C637700E50482 /* Debug */,
+				81B595DB174C637700E50482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81B595DC174C637700E50482 /* Build configuration list for PBXNativeTarget "DataPersist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81B595DD174C637700E50482 /* Debug */,
+				81B595DE174C637700E50482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81B595DF174C637700E50482 /* Build configuration list for PBXNativeTarget "DataPersistTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81B595E0174C637700E50482 /* Debug */,
+				81B595E1174C637700E50482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81B595AF174C637700E50482 /* Project object */;
+}

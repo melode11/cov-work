@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8102845717977BAE00227AFD /* SAJSONv2HttpAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8102845417977BAE00227AFD /* SAJSONv2HttpAgent.m */; };
+		8102845817977BAE00227AFD /* SAJSONv2LoginAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8102845617977BAE00227AFD /* SAJSONv2LoginAgent.m */; };
+		8102845E17977D0800227AFD /* SAv2ServicesDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8102845D17977D0800227AFD /* SAv2ServicesDefinition.m */; };
+		8102846117977E7D00227AFD /* ServerAgentsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8102846017977E7D00227AFD /* ServerAgentsFactory.m */; };
+		810284641797817D00227AFD /* SAv2ServiceLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 810284631797817D00227AFD /* SAv2ServiceLocator.m */; };
+		810284651797881500227AFD /* SAJSONv2LoginAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8102845617977BAE00227AFD /* SAJSONv2LoginAgent.m */; };
+		8102846717978A4000227AFD /* SAJSONv2HttpAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8102845417977BAE00227AFD /* SAJSONv2HttpAgent.m */; };
+		8102847A1797996C00227AFD /* ServerAgents.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8102846817978A9F00227AFD /* ServerAgents.h */; };
+		8102847D1797996C00227AFD /* SAv2ServicesDefinition.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8102845C17977D0800227AFD /* SAv2ServicesDefinition.h */; };
+		8102847E1797996C00227AFD /* ServerAgentsFactory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8102845F17977E7D00227AFD /* ServerAgentsFactory.h */; };
+		810284821797996C00227AFD /* SABizProtocols.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A41AC177968770015431F /* SABizProtocols.h */; };
+		810284831797996C00227AFD /* SAEncryptUtil.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 81ABAE3817968581007AE3B2 /* SAEncryptUtil.h */; };
+		810284841797996C00227AFD /* SAConstants.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A41AD177968770015431F /* SAConstants.h */; };
+		810284851797996C00227AFD /* SAHttpAgent.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A41B2177968770015431F /* SAHttpAgent.h */; };
+		810284861797996C00227AFD /* SAReqParameter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 818A41B4177968770015431F /* SAReqParameter.h */; };
+		810284871797996C00227AFD /* HTTPSecureModel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 81ABAE2F17967E69007AE3B2 /* HTTPSecureModel.h */; };
+		818A41D1177968770015431F /* ASIHttpHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4192177968770015431F /* ASIHttpHandler.m */; };
+		818A41D3177968770015431F /* HTTPHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4196177968770015431F /* HTTPHandler.m */; };
+		818A41E0177968780015431F /* SAHttpAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41B3177968770015431F /* SAHttpAgent.m */; };
+		818A41E1177968780015431F /* SAReqParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41B5177968770015431F /* SAReqParameter.m */; };
+		81ABAE1217967B4F007AE3B2 /* ASIHttpHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4192177968770015431F /* ASIHttpHandler.m */; };
+		81ABAE1417967B4F007AE3B2 /* HTTPHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4196177968770015431F /* HTTPHandler.m */; };
+		81ABAE2117967B4F007AE3B2 /* SAHttpAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41B3177968770015431F /* SAHttpAgent.m */; };
+		81ABAE2217967B4F007AE3B2 /* SAReqParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41B5177968770015431F /* SAReqParameter.m */; };
+		81ABAE3117967E69007AE3B2 /* HTTPSecureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81ABAE3017967E69007AE3B2 /* HTTPSecureModel.m */; };
+		81ABAE3A17968581007AE3B2 /* SAEncryptUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 81ABAE3917968581007AE3B2 /* SAEncryptUtil.m */; };
+		81ABAE3B17968762007AE3B2 /* SAEncryptUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 81ABAE3917968581007AE3B2 /* SAEncryptUtil.m */; };
+		81ABAE3C17968762007AE3B2 /* HTTPSecureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81ABAE3017967E69007AE3B2 /* HTTPSecureModel.m */; };
+		81B59562174B115300E50482 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B59561174B115300E50482 /* SenTestingKit.framework */; };
+		81B59565174B115300E50482 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B59552174B115300E50482 /* Foundation.framework */; };
+		81B59568174B115300E50482 /* libServerAgents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B5954F174B115300E50482 /* libServerAgents.a */; };
+		81B5956E174B115300E50482 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B5956C174B115300E50482 /* InfoPlist.strings */; };
+		81B59571174B115300E50482 /* ServerAgentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B59570174B115300E50482 /* ServerAgentsTests.m */; };
+		81B59832174CC7C700E50482 /* Pods.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 81B59831174CC7C700E50482 /* Pods.xcconfig */; };
+		81CB0EF8179F7D6300425333 /* SAJSONv2UserListAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CB0EF7179F7D6300425333 /* SAJSONv2UserListAgent.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		81028601179E468D00227AFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810285FC179E468D00227AFD /* Utilities.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 81B59772174C653100E50482;
+			remoteInfo = Utilities;
+		};
+		81028603179E468D00227AFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810285FC179E468D00227AFD /* Utilities.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 81B59783174C653100E50482;
+			remoteInfo = UtilitiesTests;
+		};
+		81028605179E469600227AFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810285FC179E468D00227AFD /* Utilities.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 81B59771174C653100E50482;
+			remoteInfo = Utilities;
+		};
+		81B59566174B115300E50482 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81B59547174B115300E50482 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81B5954E174B115300E50482;
+			remoteInfo = ServerAgents;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		810284791797992F00227AFD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				8102847A1797996C00227AFD /* ServerAgents.h in CopyFiles */,
+				8102847D1797996C00227AFD /* SAv2ServicesDefinition.h in CopyFiles */,
+				8102847E1797996C00227AFD /* ServerAgentsFactory.h in CopyFiles */,
+				810284821797996C00227AFD /* SABizProtocols.h in CopyFiles */,
+				810284831797996C00227AFD /* SAEncryptUtil.h in CopyFiles */,
+				810284841797996C00227AFD /* SAConstants.h in CopyFiles */,
+				810284851797996C00227AFD /* SAHttpAgent.h in CopyFiles */,
+				810284861797996C00227AFD /* SAReqParameter.h in CopyFiles */,
+				810284871797996C00227AFD /* HTTPSecureModel.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8102845317977BAE00227AFD /* SAJSONv2HttpAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAJSONv2HttpAgent.h; sourceTree = "<group>"; };
+		8102845417977BAE00227AFD /* SAJSONv2HttpAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAJSONv2HttpAgent.m; sourceTree = "<group>"; };
+		8102845517977BAE00227AFD /* SAJSONv2LoginAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAJSONv2LoginAgent.h; sourceTree = "<group>"; };
+		8102845617977BAE00227AFD /* SAJSONv2LoginAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAJSONv2LoginAgent.m; sourceTree = "<group>"; };
+		8102845C17977D0800227AFD /* SAv2ServicesDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAv2ServicesDefinition.h; sourceTree = "<group>"; };
+		8102845D17977D0800227AFD /* SAv2ServicesDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAv2ServicesDefinition.m; sourceTree = "<group>"; };
+		8102845F17977E7D00227AFD /* ServerAgentsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerAgentsFactory.h; sourceTree = "<group>"; };
+		8102846017977E7D00227AFD /* ServerAgentsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerAgentsFactory.m; sourceTree = "<group>"; };
+		810284621797817D00227AFD /* SAv2ServiceLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAv2ServiceLocator.h; sourceTree = "<group>"; };
+		810284631797817D00227AFD /* SAv2ServiceLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAv2ServiceLocator.m; sourceTree = "<group>"; };
+		8102846817978A9F00227AFD /* ServerAgents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerAgents.h; sourceTree = "<group>"; };
+		810285FC179E468D00227AFD /* Utilities.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Utilities.xcodeproj; path = ../Utilities/Utilities.xcodeproj; sourceTree = "<group>"; };
+		818A4191177968770015431F /* ASIHttpHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHttpHandler.h; sourceTree = "<group>"; };
+		818A4192177968770015431F /* ASIHttpHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHttpHandler.m; sourceTree = "<group>"; };
+		818A4195177968770015431F /* HTTPHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPHandler.h; sourceTree = "<group>"; };
+		818A4196177968770015431F /* HTTPHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPHandler.m; sourceTree = "<group>"; };
+		818A41AC177968770015431F /* SABizProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SABizProtocols.h; sourceTree = "<group>"; };
+		818A41AD177968770015431F /* SAConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAConstants.h; sourceTree = "<group>"; };
+		818A41B2177968770015431F /* SAHttpAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAHttpAgent.h; sourceTree = "<group>"; };
+		818A41B3177968770015431F /* SAHttpAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAHttpAgent.m; sourceTree = "<group>"; };
+		818A41B4177968770015431F /* SAReqParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAReqParameter.h; sourceTree = "<group>"; };
+		818A41B5177968770015431F /* SAReqParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAReqParameter.m; sourceTree = "<group>"; };
+		81ABAE2F17967E69007AE3B2 /* HTTPSecureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPSecureModel.h; sourceTree = "<group>"; };
+		81ABAE3017967E69007AE3B2 /* HTTPSecureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPSecureModel.m; sourceTree = "<group>"; };
+		81ABAE3817968581007AE3B2 /* SAEncryptUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAEncryptUtil.h; sourceTree = "<group>"; };
+		81ABAE3917968581007AE3B2 /* SAEncryptUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEncryptUtil.m; sourceTree = "<group>"; };
+		81B5954F174B115300E50482 /* libServerAgents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libServerAgents.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		81B59552174B115300E50482 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		81B59556174B115300E50482 /* ServerAgents-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ServerAgents-Prefix.pch"; sourceTree = "<group>"; };
+		81B59560174B115300E50482 /* ServerAgentsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServerAgentsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81B59561174B115300E50482 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		81B5956B174B115300E50482 /* ServerAgentsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ServerAgentsTests-Info.plist"; sourceTree = "<group>"; };
+		81B5956D174B115300E50482 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		81B5956F174B115300E50482 /* ServerAgentsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerAgentsTests.h; sourceTree = "<group>"; };
+		81B59570174B115300E50482 /* ServerAgentsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerAgentsTests.m; sourceTree = "<group>"; };
+		81B59831174CC7C700E50482 /* Pods.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods.xcconfig; sourceTree = "<group>"; };
+		81CB0EF6179F7D6300425333 /* SAJSONv2UserListAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAJSONv2UserListAgent.h; sourceTree = "<group>"; };
+		81CB0EF7179F7D6300425333 /* SAJSONv2UserListAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAJSONv2UserListAgent.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81B5955C174B115300E50482 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81B59562174B115300E50482 /* SenTestingKit.framework in Frameworks */,
+				81B59565174B115300E50482 /* Foundation.framework in Frameworks */,
+				81B59568174B115300E50482 /* libServerAgents.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8102845117977BAE00227AFD /* V2 */ = {
+			isa = PBXGroup;
+			children = (
+				8102845217977BAE00227AFD /* JSONv2 */,
+				8102845C17977D0800227AFD /* SAv2ServicesDefinition.h */,
+				8102845D17977D0800227AFD /* SAv2ServicesDefinition.m */,
+				8102845F17977E7D00227AFD /* ServerAgentsFactory.h */,
+				8102846017977E7D00227AFD /* ServerAgentsFactory.m */,
+				810284621797817D00227AFD /* SAv2ServiceLocator.h */,
+				810284631797817D00227AFD /* SAv2ServiceLocator.m */,
+			);
+			path = V2;
+			sourceTree = "<group>";
+		};
+		8102845217977BAE00227AFD /* JSONv2 */ = {
+			isa = PBXGroup;
+			children = (
+				8102845317977BAE00227AFD /* SAJSONv2HttpAgent.h */,
+				8102845417977BAE00227AFD /* SAJSONv2HttpAgent.m */,
+				8102845517977BAE00227AFD /* SAJSONv2LoginAgent.h */,
+				8102845617977BAE00227AFD /* SAJSONv2LoginAgent.m */,
+				81CB0EF6179F7D6300425333 /* SAJSONv2UserListAgent.h */,
+				81CB0EF7179F7D6300425333 /* SAJSONv2UserListAgent.m */,
+			);
+			path = JSONv2;
+			sourceTree = "<group>";
+		};
+		810285FD179E468D00227AFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81028602179E468D00227AFD /* libUtilities.a */,
+				81028604179E468D00227AFD /* UtilitiesTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		818A4190177968770015431F /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				818A4191177968770015431F /* ASIHttpHandler.h */,
+				818A4192177968770015431F /* ASIHttpHandler.m */,
+				818A4195177968770015431F /* HTTPHandler.h */,
+				818A4196177968770015431F /* HTTPHandler.m */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		81B59546174B115300E50482 = {
+			isa = PBXGroup;
+			children = (
+				81B59554174B115300E50482 /* ServerAgents */,
+				81B59569174B115300E50482 /* ServerAgentsTests */,
+				81B59551174B115300E50482 /* Frameworks */,
+				81B59550174B115300E50482 /* Products */,
+				81B59831174CC7C700E50482 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		81B59550174B115300E50482 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81B5954F174B115300E50482 /* libServerAgents.a */,
+				81B59560174B115300E50482 /* ServerAgentsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81B59551174B115300E50482 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				810285FC179E468D00227AFD /* Utilities.xcodeproj */,
+				81B59552174B115300E50482 /* Foundation.framework */,
+				81B59561174B115300E50482 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81B59554174B115300E50482 /* ServerAgents */ = {
+			isa = PBXGroup;
+			children = (
+				8102846817978A9F00227AFD /* ServerAgents.h */,
+				8102845117977BAE00227AFD /* V2 */,
+				818A4190177968770015431F /* Handlers */,
+				818A41AC177968770015431F /* SABizProtocols.h */,
+				81ABAE3817968581007AE3B2 /* SAEncryptUtil.h */,
+				81ABAE3917968581007AE3B2 /* SAEncryptUtil.m */,
+				818A41AD177968770015431F /* SAConstants.h */,
+				818A41B2177968770015431F /* SAHttpAgent.h */,
+				818A41B3177968770015431F /* SAHttpAgent.m */,
+				818A41B4177968770015431F /* SAReqParameter.h */,
+				818A41B5177968770015431F /* SAReqParameter.m */,
+				81ABAE2F17967E69007AE3B2 /* HTTPSecureModel.h */,
+				81ABAE3017967E69007AE3B2 /* HTTPSecureModel.m */,
+				81B59555174B115300E50482 /* Supporting Files */,
+			);
+			path = ServerAgents;
+			sourceTree = "<group>";
+		};
+		81B59555174B115300E50482 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				81B59556174B115300E50482 /* ServerAgents-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81B59569174B115300E50482 /* ServerAgentsTests */ = {
+			isa = PBXGroup;
+			children = (
+				81B5956F174B115300E50482 /* ServerAgentsTests.h */,
+				81B59570174B115300E50482 /* ServerAgentsTests.m */,
+				81B5956A174B115300E50482 /* Supporting Files */,
+			);
+			path = ServerAgentsTests;
+			sourceTree = "<group>";
+		};
+		81B5956A174B115300E50482 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				81B5956B174B115300E50482 /* ServerAgentsTests-Info.plist */,
+				81B5956C174B115300E50482 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81B5954E174B115300E50482 /* ServerAgents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81B59574174B115300E50482 /* Build configuration list for PBXNativeTarget "ServerAgents" */;
+			buildPhases = (
+				81B5954B174B115300E50482 /* Sources */,
+				810284791797992F00227AFD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81028606179E469600227AFD /* PBXTargetDependency */,
+			);
+			name = ServerAgents;
+			productName = ServerAgents;
+			productReference = 81B5954F174B115300E50482 /* libServerAgents.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		81B5955F174B115300E50482 /* ServerAgentsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81B59577174B115300E50482 /* Build configuration list for PBXNativeTarget "ServerAgentsTests" */;
+			buildPhases = (
+				81B5955B174B115300E50482 /* Sources */,
+				81B5955C174B115300E50482 /* Frameworks */,
+				81B5955D174B115300E50482 /* Resources */,
+				81B5955E174B115300E50482 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81B59567174B115300E50482 /* PBXTargetDependency */,
+			);
+			name = ServerAgentsTests;
+			productName = ServerAgentsTests;
+			productReference = 81B59560174B115300E50482 /* ServerAgentsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81B59547174B115300E50482 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Shanghai;
+			};
+			buildConfigurationList = 81B5954A174B115300E50482 /* Build configuration list for PBXProject "ServerAgents" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 81B59546174B115300E50482;
+			productRefGroup = 81B59550174B115300E50482 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 810285FD179E468D00227AFD /* Products */;
+					ProjectRef = 810285FC179E468D00227AFD /* Utilities.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				81B5954E174B115300E50482 /* ServerAgents */,
+				81B5955F174B115300E50482 /* ServerAgentsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		81028602179E468D00227AFD /* libUtilities.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUtilities.a;
+			remoteRef = 81028601179E468D00227AFD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		81028604179E468D00227AFD /* UtilitiesTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UtilitiesTests.octest;
+			remoteRef = 81028603179E468D00227AFD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81B5955D174B115300E50482 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81B5956E174B115300E50482 /* InfoPlist.strings in Resources */,
+				81B59832174CC7C700E50482 /* Pods.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81B5955E174B115300E50482 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81B5954B174B115300E50482 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8102846717978A4000227AFD /* SAJSONv2HttpAgent.m in Sources */,
+				810284651797881500227AFD /* SAJSONv2LoginAgent.m in Sources */,
+				81ABAE3B17968762007AE3B2 /* SAEncryptUtil.m in Sources */,
+				81ABAE3C17968762007AE3B2 /* HTTPSecureModel.m in Sources */,
+				81ABAE1217967B4F007AE3B2 /* ASIHttpHandler.m in Sources */,
+				81ABAE1417967B4F007AE3B2 /* HTTPHandler.m in Sources */,
+				81ABAE2117967B4F007AE3B2 /* SAHttpAgent.m in Sources */,
+				81ABAE2217967B4F007AE3B2 /* SAReqParameter.m in Sources */,
+				8102845E17977D0800227AFD /* SAv2ServicesDefinition.m in Sources */,
+				8102846117977E7D00227AFD /* ServerAgentsFactory.m in Sources */,
+				810284641797817D00227AFD /* SAv2ServiceLocator.m in Sources */,
+				81CB0EF8179F7D6300425333 /* SAJSONv2UserListAgent.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81B5955B174B115300E50482 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81B59571174B115300E50482 /* ServerAgentsTests.m in Sources */,
+				818A41D1177968770015431F /* ASIHttpHandler.m in Sources */,
+				818A41D3177968770015431F /* HTTPHandler.m in Sources */,
+				818A41E0177968780015431F /* SAHttpAgent.m in Sources */,
+				818A41E1177968780015431F /* SAReqParameter.m in Sources */,
+				81ABAE3117967E69007AE3B2 /* HTTPSecureModel.m in Sources */,
+				81ABAE3A17968581007AE3B2 /* SAEncryptUtil.m in Sources */,
+				8102845717977BAE00227AFD /* SAJSONv2HttpAgent.m in Sources */,
+				8102845817977BAE00227AFD /* SAJSONv2LoginAgent.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		81028606179E469600227AFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Utilities;
+			targetProxy = 81028605179E469600227AFD /* PBXContainerItemProxy */;
+		};
+		81B59567174B115300E50482 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81B5954E174B115300E50482 /* ServerAgents */;
+			targetProxy = 81B59566174B115300E50482 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		81B5956C174B115300E50482 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81B5956D174B115300E50482 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		81B59572174B115300E50482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81B59831174CC7C700E50482 /* Pods.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		81B59573174B115300E50482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81B59831174CC7C700E50482 /* Pods.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		81B59575174B115300E50482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ServerAgents.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ServerAgents/ServerAgents-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		81B59576174B115300E50482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ServerAgents.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ServerAgents/ServerAgents-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		81B59578174B115300E50482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ServerAgents/ServerAgents-Prefix.pch";
+				INFOPLIST_FILE = "ServerAgentsTests/ServerAgentsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		81B59579174B115300E50482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ServerAgents/ServerAgents-Prefix.pch";
+				INFOPLIST_FILE = "ServerAgentsTests/ServerAgentsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81B5954A174B115300E50482 /* Build configuration list for PBXProject "ServerAgents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81B59572174B115300E50482 /* Debug */,
+				81B59573174B115300E50482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81B59574174B115300E50482 /* Build configuration list for PBXNativeTarget "ServerAgents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81B59575174B115300E50482 /* Debug */,
+				81B59576174B115300E50482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81B59577174B115300E50482 /* Build configuration list for PBXNativeTarget "ServerAgentsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81B59578174B115300E50482 /* Debug */,
+				81B59579174B115300E50482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81B59547174B115300E50482 /* Project object */;
+}

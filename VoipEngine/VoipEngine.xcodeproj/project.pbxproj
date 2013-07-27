@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		81B5958C174B156500E50482 /* VoipEngine.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 81B5958B174B156500E50482 /* VoipEngine.h */; };
+		81B5958E174B156500E50482 /* VoipEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B5958D174B156500E50482 /* VoipEngine.m */; };
+		81B59596174B156500E50482 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B59595174B156500E50482 /* SenTestingKit.framework */; };
+		81B59599174B156500E50482 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B59586174B156500E50482 /* Foundation.framework */; };
+		81B5959C174B156500E50482 /* libVoipEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B59583174B156500E50482 /* libVoipEngine.a */; };
+		81B595A2174B156500E50482 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B595A0174B156500E50482 /* InfoPlist.strings */; };
+		81B595A5174B156500E50482 /* VoipEngineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B595A4174B156500E50482 /* VoipEngineTests.m */; };
+		81B59830174CC7B500E50482 /* Pods.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 81B5982F174CC7B500E50482 /* Pods.xcconfig */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		810285F6179E464800227AFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810285F1179E464800227AFD /* Utilities.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 81B59772174C653100E50482;
+			remoteInfo = Utilities;
+		};
+		810285F8179E464800227AFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810285F1179E464800227AFD /* Utilities.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 81B59783174C653100E50482;
+			remoteInfo = UtilitiesTests;
+		};
+		810285FA179E467600227AFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810285F1179E464800227AFD /* Utilities.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 81B59771174C653100E50482;
+			remoteInfo = Utilities;
+		};
+		81B5959A174B156500E50482 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81B5957B174B156500E50482 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81B59582174B156500E50482;
+			remoteInfo = VoipEngine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		81B59581174B156500E50482 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				81B5958C174B156500E50482 /* VoipEngine.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		810285F1179E464800227AFD /* Utilities.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Utilities.xcodeproj; path = ../Utilities/Utilities.xcodeproj; sourceTree = "<group>"; };
+		81B59583174B156500E50482 /* libVoipEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVoipEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		81B59586174B156500E50482 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		81B5958A174B156500E50482 /* VoipEngine-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VoipEngine-Prefix.pch"; sourceTree = "<group>"; };
+		81B5958B174B156500E50482 /* VoipEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoipEngine.h; sourceTree = "<group>"; };
+		81B5958D174B156500E50482 /* VoipEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoipEngine.m; sourceTree = "<group>"; };
+		81B59594174B156500E50482 /* VoipEngineTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoipEngineTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81B59595174B156500E50482 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		81B5959F174B156500E50482 /* VoipEngineTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VoipEngineTests-Info.plist"; sourceTree = "<group>"; };
+		81B595A1174B156500E50482 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		81B595A3174B156500E50482 /* VoipEngineTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoipEngineTests.h; sourceTree = "<group>"; };
+		81B595A4174B156500E50482 /* VoipEngineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoipEngineTests.m; sourceTree = "<group>"; };
+		81B5982F174CC7B500E50482 /* Pods.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81B59590174B156500E50482 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81B59596174B156500E50482 /* SenTestingKit.framework in Frameworks */,
+				81B59599174B156500E50482 /* Foundation.framework in Frameworks */,
+				81B5959C174B156500E50482 /* libVoipEngine.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		810285F2179E464800227AFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				810285F7179E464800227AFD /* libUtilities.a */,
+				810285F9179E464800227AFD /* UtilitiesTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81B5957A174B156500E50482 = {
+			isa = PBXGroup;
+			children = (
+				81B59588174B156500E50482 /* VoipEngine */,
+				81B5959D174B156500E50482 /* VoipEngineTests */,
+				81B59585174B156500E50482 /* Frameworks */,
+				81B59584174B156500E50482 /* Products */,
+				81B5982F174CC7B500E50482 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		81B59584174B156500E50482 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81B59583174B156500E50482 /* libVoipEngine.a */,
+				81B59594174B156500E50482 /* VoipEngineTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81B59585174B156500E50482 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				810285F1179E464800227AFD /* Utilities.xcodeproj */,
+				81B59586174B156500E50482 /* Foundation.framework */,
+				81B59595174B156500E50482 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81B59588174B156500E50482 /* VoipEngine */ = {
+			isa = PBXGroup;
+			children = (
+				81B5958B174B156500E50482 /* VoipEngine.h */,
+				81B5958D174B156500E50482 /* VoipEngine.m */,
+				81B59589174B156500E50482 /* Supporting Files */,
+			);
+			path = VoipEngine;
+			sourceTree = "<group>";
+		};
+		81B59589174B156500E50482 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				81B5958A174B156500E50482 /* VoipEngine-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81B5959D174B156500E50482 /* VoipEngineTests */ = {
+			isa = PBXGroup;
+			children = (
+				81B595A3174B156500E50482 /* VoipEngineTests.h */,
+				81B595A4174B156500E50482 /* VoipEngineTests.m */,
+				81B5959E174B156500E50482 /* Supporting Files */,
+			);
+			path = VoipEngineTests;
+			sourceTree = "<group>";
+		};
+		81B5959E174B156500E50482 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				81B5959F174B156500E50482 /* VoipEngineTests-Info.plist */,
+				81B595A0174B156500E50482 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81B59582174B156500E50482 /* VoipEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81B595A8174B156500E50482 /* Build configuration list for PBXNativeTarget "VoipEngine" */;
+			buildPhases = (
+				81B5957F174B156500E50482 /* Sources */,
+				81B59581174B156500E50482 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				810285FB179E467600227AFD /* PBXTargetDependency */,
+			);
+			name = VoipEngine;
+			productName = VoipEngine;
+			productReference = 81B59583174B156500E50482 /* libVoipEngine.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		81B59593174B156500E50482 /* VoipEngineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81B595AB174B156500E50482 /* Build configuration list for PBXNativeTarget "VoipEngineTests" */;
+			buildPhases = (
+				81B5958F174B156500E50482 /* Sources */,
+				81B59590174B156500E50482 /* Frameworks */,
+				81B59591174B156500E50482 /* Resources */,
+				81B59592174B156500E50482 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81B5959B174B156500E50482 /* PBXTargetDependency */,
+			);
+			name = VoipEngineTests;
+			productName = VoipEngineTests;
+			productReference = 81B59594174B156500E50482 /* VoipEngineTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81B5957B174B156500E50482 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Shanghai;
+			};
+			buildConfigurationList = 81B5957E174B156500E50482 /* Build configuration list for PBXProject "VoipEngine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 81B5957A174B156500E50482;
+			productRefGroup = 81B59584174B156500E50482 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 810285F2179E464800227AFD /* Products */;
+					ProjectRef = 810285F1179E464800227AFD /* Utilities.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				81B59582174B156500E50482 /* VoipEngine */,
+				81B59593174B156500E50482 /* VoipEngineTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		810285F7179E464800227AFD /* libUtilities.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUtilities.a;
+			remoteRef = 810285F6179E464800227AFD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		810285F9179E464800227AFD /* UtilitiesTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UtilitiesTests.octest;
+			remoteRef = 810285F8179E464800227AFD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81B59591174B156500E50482 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81B595A2174B156500E50482 /* InfoPlist.strings in Resources */,
+				81B59830174CC7B500E50482 /* Pods.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81B59592174B156500E50482 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81B5957F174B156500E50482 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81B5958E174B156500E50482 /* VoipEngine.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81B5958F174B156500E50482 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81B595A5174B156500E50482 /* VoipEngineTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		810285FB179E467600227AFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Utilities;
+			targetProxy = 810285FA179E467600227AFD /* PBXContainerItemProxy */;
+		};
+		81B5959B174B156500E50482 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81B59582174B156500E50482 /* VoipEngine */;
+			targetProxy = 81B5959A174B156500E50482 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		81B595A0174B156500E50482 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81B595A1174B156500E50482 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		81B595A6174B156500E50482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81B5982F174CC7B500E50482 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		81B595A7174B156500E50482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81B5982F174CC7B500E50482 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		81B595A9174B156500E50482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				DSTROOT = /tmp/VoipEngine.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VoipEngine/VoipEngine-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		81B595AA174B156500E50482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				DSTROOT = /tmp/VoipEngine.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VoipEngine/VoipEngine-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		81B595AC174B156500E50482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VoipEngine/VoipEngine-Prefix.pch";
+				INFOPLIST_FILE = "VoipEngineTests/VoipEngineTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		81B595AD174B156500E50482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VoipEngine/VoipEngine-Prefix.pch";
+				INFOPLIST_FILE = "VoipEngineTests/VoipEngineTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81B5957E174B156500E50482 /* Build configuration list for PBXProject "VoipEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81B595A6174B156500E50482 /* Debug */,
+				81B595A7174B156500E50482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81B595A8174B156500E50482 /* Build configuration list for PBXNativeTarget "VoipEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81B595A9174B156500E50482 /* Debug */,
+				81B595AA174B156500E50482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81B595AB174B156500E50482 /* Build configuration list for PBXNativeTarget "VoipEngineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81B595AC174B156500E50482 /* Debug */,
+				81B595AD174B156500E50482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81B5957B174B156500E50482 /* Project object */;
+}
