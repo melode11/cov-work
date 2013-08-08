@@ -18,7 +18,13 @@
 //    {
 //        relativePath = @"login";
 //    }
-    return [@"http://helpsource-dev.thcg.net:1337/ws/" stringByAppendingString:serviceType];
+    if ([serviceType isEqualToString:SERVICE_LOGIN]) {
+        return [@"http://helpsource-dev.thcg.net:1337/ws/" stringByAppendingString:serviceType];
+    } else if ([serviceType isEqualToString:SERVICE_USERLIST]) {
+        return [@"http://helpsource-dev.thcg.net:1337/ws/" stringByAppendingString:serviceType];
+    } else {
+        return self.baseUrl;
+    }
 //    return [self.baseUrl stringByAppendingFormat:@"/%@",relativePath];
 }
 

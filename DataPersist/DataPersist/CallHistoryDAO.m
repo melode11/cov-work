@@ -10,8 +10,9 @@
 #import "Utilities/DTConstants.h"
 #import "Utilities/NSString+Name_Device.h"
 #import "Utilities/constants.h"
+#import "SqliteDatabasePool.h"
 
-#define kCallHistoryFile @"callhistory"
+#define kCallHistoryFile @"helpsource"
 #define kUnViewedMissCount @"unViewedMissCount"
 
 @implementation CallHistoryDAO
@@ -23,13 +24,13 @@
     self = [super init];
     if(self)
     {
-        _db = [[SqliteDatabaseWrapper alloc] initWithPath:[path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.db",kCallHistoryFile]]];
+        _db = [[[SqliteDatabasePool sharedInstance] getDatabaseWithPath:[path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.db",kCallHistoryFile]]] retain];
         [_db open];
         NSArray *columnDescriptors = [NSArray arrayWithObjects:[SqliteColumnDescriptor descriptorWithColumnName:kHistoryRecordType andType:eColumnTypeInteger],
          [SqliteColumnDescriptor descriptorWithColumnName:kHistoryRecordPeerId andType:eColumnTypeText],
          [SqliteColumnDescriptor descriptorWithColumnName:kHistoryRecordPeerDisplayName andType:eColumnTypeText],
          [SqliteColumnDescriptor descriptorWithColumnName:kHistoryRecordPeerDeviceType andType:eColumnTypeText],
-         [SqliteColumnDescriptor descriptorWithColumnName:kHistoryRecordTime andType:eColumnTypeFoat],
+         [SqliteColumnDescriptor descriptorWithColumnName:kHistoryRecordTime andType:eColumnTypeFloat],
          [SqliteColumnDescriptor descriptorWithColumnName:kHistoryRecordCallId andType:eColumnTypeInteger],
         nil];
         [_db createNotExistTableWithName:@"history_record" primaryKey:kHistoryRecordId columnDescriptors:columnDescriptors];

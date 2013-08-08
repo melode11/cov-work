@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		81B59747174C651D00E50482 /* Notification.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 81B59746174C651D00E50482 /* Notification.h */; };
-		81B59749174C651D00E50482 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B59748174C651D00E50482 /* Notification.m */; };
+		0AABB7D717A0B5C6002BAAB5 /* SuburbanAirship.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AABB7D517A0B5C6002BAAB5 /* SuburbanAirship.m */; };
+		0AABB81017A55E62002BAAB5 /* SuburbanAirshipNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AABB80F17A55E61002BAAB5 /* SuburbanAirshipNotification.m */; };
+		0AABB84D17A5FF91002BAAB5 /* SuburbanAirship.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AABB7D417A0B5C6002BAAB5 /* SuburbanAirship.h */; };
+		0AABB84E17A5FF94002BAAB5 /* SuburbanAirshipNotification.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AABB80E17A55E61002BAAB5 /* SuburbanAirshipNotification.h */; };
 		81B59751174C651D00E50482 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B59750174C651D00E50482 /* SenTestingKit.framework */; };
-		81B59753174C651D00E50482 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B59752174C651D00E50482 /* UIKit.framework */; };
 		81B59754174C651D00E50482 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B59741174C651D00E50482 /* Foundation.framework */; };
 		81B59757174C651D00E50482 /* libNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B5973E174C651D00E50482 /* libNotification.a */; };
 		81B5975D174C651D00E50482 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B5975B174C651D00E50482 /* InfoPlist.strings */; };
@@ -56,22 +57,25 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				81B59747174C651D00E50482 /* Notification.h in CopyFiles */,
+				0AABB84E17A5FF94002BAAB5 /* SuburbanAirshipNotification.h in CopyFiles */,
+				0AABB84D17A5FF91002BAAB5 /* SuburbanAirship.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0AABB7D417A0B5C6002BAAB5 /* SuburbanAirship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuburbanAirship.h; sourceTree = "<group>"; };
+		0AABB7D517A0B5C6002BAAB5 /* SuburbanAirship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuburbanAirship.m; sourceTree = "<group>"; };
+		0AABB7DA17A0EF71002BAAB5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0AABB80E17A55E61002BAAB5 /* SuburbanAirshipNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuburbanAirshipNotification.h; sourceTree = "<group>"; };
+		0AABB80F17A55E61002BAAB5 /* SuburbanAirshipNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuburbanAirshipNotification.m; sourceTree = "<group>"; };
 		810285BA179E455C00227AFD /* Utilities.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Utilities.xcodeproj; path = ../Utilities/Utilities.xcodeproj; sourceTree = "<group>"; };
 		81B5973E174C651D00E50482 /* libNotification.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNotification.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B59741174C651D00E50482 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		81B59745174C651D00E50482 /* Notification-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Notification-Prefix.pch"; sourceTree = "<group>"; };
-		81B59746174C651D00E50482 /* Notification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
-		81B59748174C651D00E50482 /* Notification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
 		81B5974F174C651D00E50482 /* NotificationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotificationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B59750174C651D00E50482 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		81B59752174C651D00E50482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		81B5975A174C651D00E50482 /* NotificationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NotificationTests-Info.plist"; sourceTree = "<group>"; };
 		81B5975C174C651D00E50482 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		81B5975E174C651D00E50482 /* NotificationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationTests.h; sourceTree = "<group>"; };
@@ -85,7 +89,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				81B59751174C651D00E50482 /* SenTestingKit.framework in Frameworks */,
-				81B59753174C651D00E50482 /* UIKit.framework in Frameworks */,
 				81B59754174C651D00E50482 /* Foundation.framework in Frameworks */,
 				81B59757174C651D00E50482 /* libNotification.a in Frameworks */,
 			);
@@ -129,7 +132,7 @@
 				810285BA179E455C00227AFD /* Utilities.xcodeproj */,
 				81B59741174C651D00E50482 /* Foundation.framework */,
 				81B59750174C651D00E50482 /* SenTestingKit.framework */,
-				81B59752174C651D00E50482 /* UIKit.framework */,
+				0AABB7DA17A0EF71002BAAB5 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -137,8 +140,10 @@
 		81B59743174C651D00E50482 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
-				81B59746174C651D00E50482 /* Notification.h */,
-				81B59748174C651D00E50482 /* Notification.m */,
+				0AABB80E17A55E61002BAAB5 /* SuburbanAirshipNotification.h */,
+				0AABB80F17A55E61002BAAB5 /* SuburbanAirshipNotification.m */,
+				0AABB7D417A0B5C6002BAAB5 /* SuburbanAirship.h */,
+				0AABB7D517A0B5C6002BAAB5 /* SuburbanAirship.m */,
 				81B59744174C651D00E50482 /* Supporting Files */,
 			);
 			path = Notification;
@@ -293,7 +298,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81B59749174C651D00E50482 /* Notification.m in Sources */,
+				0AABB7D717A0B5C6002BAAB5 /* SuburbanAirship.m in Sources */,
+				0AABB81017A55E62002BAAB5 /* SuburbanAirshipNotification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

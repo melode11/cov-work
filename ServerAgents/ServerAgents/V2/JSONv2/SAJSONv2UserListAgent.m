@@ -49,7 +49,7 @@
     for (NSDictionary* userDic in users) {
         Contact* contact = [ContactBuilder buildFromDict:userDic];
         [contacts addObject:contact];
-        [statusMapping setObject:[NSNumber numberWithBool:[[userDic objectForKey:@"status"] integerValue]] forKey:[NSNumber numberWithInteger:contact.contactId]];
+        [statusMapping setObject:[NSNumber numberWithInteger:[[userDic objectForKey:@"status"] integerValue]] forKey:[NSNumber numberWithInteger:contact.contactId]];
         [deviceMapping setObject:[userDic objectForKey:@"device"] forKey:[NSNumber numberWithInteger:contact.contactId]];
     }
     [_contacts release];

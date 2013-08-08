@@ -27,7 +27,7 @@ static inline SqliteColumnType typeFromTypeName(const char * typename)
             type = eColumnTypeInteger;
             break;
         case 'R'://real
-            type = eColumnTypeFoat;
+            type = eColumnTypeFloat;
             break;
         case 'B'://blob
             type = eColumnTypeBlob;
@@ -88,7 +88,7 @@ int ColunmInfoCallback(void* outArr,int columnsCount, char** textValue, char** c
         case eColumnTypeInteger:
             strType = @"INTEGER";
             break;
-        case eColumnTypeFoat:
+        case eColumnTypeFloat:
             strType = @"REAL";
             break;
         case eColumnTypeBlob:
@@ -151,7 +151,7 @@ int ColunmInfoCallback(void* outArr,int columnsCount, char** textValue, char** c
             //int
             objcType = [NSNumber numberWithLongLong:sqlite3_column_int64(statm, index)];
             break;
-        case eColumnTypeFoat:
+        case eColumnTypeFloat:
             objcType = [NSNumber numberWithDouble:sqlite3_column_double(statm, index)];
             break;
         case eColumnTypeBlob:

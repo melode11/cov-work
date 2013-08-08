@@ -1,5 +1,5 @@
 //
-//  TextMessage.m
+//  Message.m
 //  Messaging
 //
 //  Created by ThemisKing on 7/17/13.
@@ -7,24 +7,28 @@
 //
 
 #import "Message.h"
+NSString * const TYPE_TEXT = @"t";
+NSString * const TYPE_CONTROL = @"c";
+NSString * const TYPE_REQUEST = @"r";
+NSString * const TYPE_NOTIFICATION = @"n";
+
+static NSArray* _types = NULL;
+
 @interface Message ()
 @property (nonatomic, retain) NSArray* types;
 @end
 
 @implementation Message
-@synthesize type = _type;
-@synthesize needAck = _needAck;
-@synthesize data = _data;
-@synthesize types = _types;
-@synthesize msgID = _msgID;
+
++(void)initialize
+{
+    _types = [NSArray arrayWithObjects: TYPE_CONTROL, TYPE_TEXT, TYPE_REQUEST, TYPE_NOTIFICATION, nil];
+}
 
 - (id)init {
     if ((self = [super init])) {
-        _type = nil;
         _needAck = NO;
-        _data = nil;
         _msgID = nil;
-        _types = [NSArray arrayWithObjects: @"c", @"t", @"r", @"n", nil];
     }
     return self;
 }
@@ -34,14 +38,14 @@
     return [_types objectAtIndex:index];
 }
 
-- (id) initWithTypeIndex:(int)index
+-(NSString *)type
 {
-    self = [self init];
-    if (self) {
-        self.type = [self typeForIndex:index];
-    }
-    return self;
+    return nil;
 }
 
+-(NSDictionary *)data
+{
+    return nil;
+}
 
 @end

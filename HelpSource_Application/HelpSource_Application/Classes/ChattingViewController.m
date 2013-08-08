@@ -9,19 +9,26 @@
 #import "ChattingViewController.h"
 #import "Messaging/Messaging.h"
 #import "DataPersist/DataPersist.h"
+#import "Utilities/ChatContent.h"
+#import "Messaging/TextMessage.h"
+#import "CurrentChattingManager.h"
+#import "CustomBadge.h"
 
 @interface ChattingViewController ()
 @property (nonatomic, retain) UIView *containerView;
 @property (nonatomic, retain) HPGrowingTextView *textView;
 @property (nonatomic, retain) NSMutableArray *messages;
-@property (nonatomic, retain) UITableView *chattingList;
+@property (nonatomic, retain) UITableView *chattingListView;
+@property (nonatomic,retain) EGORefreshTableHeaderView *refreshMsgHistoryHeaderView;
+@property (nonatomic) BOOL isLoadingHistory;
 @end
 
 @implementation ChattingViewController
 @synthesize  containerView = _containerView;
 @synthesize textView = _textView;
 @synthesize messages = _messages;
-@synthesize chattingList = _chattingList;
+@synthesize chattingListView = _chattingListView;
+@synthesize refreshMsgHistoryHeaderView = _refreshMsgHistoryHeaderView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,7 +60,7 @@
     [self.view addGestureRecognizer:tap];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(socketIOReceiveMessage:)
+                                             selector:@selector(messagingReceiveMessage:)
                                                  name:kSocketServerMsgReceived
                                                object:nil];
 }
@@ -68,10 +75,22 @@
 {
     [super viewDidLoad];
     
-    self.messages = [[NSMutableArray alloc] init];
+   self.messages = [[CurrentChattingManager sharedInstance] getMessagesWith:_contact.contact.contactId];
+    [[CurrentChattingManager sharedInstance] setCurrentUser:_contact.contact.contactId];
+//    self.messages = [[NSMutableArray alloc] init];
     
     [self.navigationController setNavigationBarHidden:NO];
+    [self setTitle:_contact.contact.displayName];
+
     [self addObservers];
+    
+    if (self.refreshMsgHistoryHeaderView == nil) {
+        self.refreshMsgHistoryHeaderView = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.chattingListView.bounds.size.height, self.chattingListView.frame.size.width, self.chattingListView.bounds.size.height)];
+        self.refreshMsgHistoryHeaderView.delegate = self;
+        [self.chattingListView addSubview:self.refreshMsgHistoryHeaderView];
+    }
+    [self.refreshMsgHistoryHeaderView refreshLabelText];
+    self.isLoadingHistory = NO;
     
 //    self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
 //    self.view.backgroundColor = [UIColor colorWithRed:219.0f/255.0f green:226.0f/255.0f blue:237.0f/255.0f alpha:1];
@@ -146,14 +165,17 @@
 -(void)Send
 {
     [self.textView resignFirstResponder];
-    // TODO: send message
-    TextMessage* textMsg = [[[TextMessage alloc] init] autorelease];
+
+    if ([self.textView.text isEqualToString:@""]) {
+        return;
+    }
+    ChatContent* textMsg = [[[ChatContent alloc] init] autorelease];
     textMsg.text = self.textView.text;
     textMsg.userId = [NSString stringWithFormat:@"%d",[DAOManager sharedInstance].userProfileDAO.userProfile.userId];
     textMsg.peerId = [NSString stringWithFormat:@"%d",_contact.contact.contactId];
-    textMsg.timestamp = 0;
+    textMsg.timestamp =[[NSDate date] timeIntervalSince1970];
     [self addToChattingList:textMsg];
-    [[Messaging sharedInstance] sendTextMessage:textMsg];
+    [[Messaging sharedInstance] sendChatMessage:textMsg];
     self.textView.text = @"";
 }
 
@@ -227,11 +249,14 @@
 //	}
 //}
 
-- (void)addToChattingList:(TextMessage*) textMsg {
-    [self.messages addObject:textMsg];
-    [self.chattingList reloadData];
+- (void)addToChattingList:(ChatContent*) textMsg {
+//    [self.messages addObject:textMsg];
+    [[CurrentChattingManager sharedInstance] addMessage:textMsg with:_contact.contact.contactId];
+    self.messages = [[CurrentChattingManager sharedInstance] getMessagesWith:_contact.contact.contactId];
+
+    [self.chattingListView reloadData];
     NSUInteger index = [self.messages count] - 1;
-    [self.chattingList scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    [self.chattingListView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
 
@@ -252,8 +277,15 @@
 	
 	UIImageView *balloonView;
 	UILabel *label;
-	
+    CustomBadge *customBadge5 = nil;;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    ChatContent *textMsg = [self.messages objectAtIndex:indexPath.row];
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"MMM dd, yyyy HH:mm"];
+    NSTimeInterval epoch = [textMsg.timestamp doubleValue]/1000;
+    NSDate * date = [NSDate dateWithTimeIntervalSince1970:epoch];
+    NSString *dateString = [format stringFromDate:date];
+    
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -274,6 +306,14 @@
 		[message addSubview:balloonView];
 		[message addSubview:label];
 		[cell.contentView addSubview:message];
+        
+        customBadge5 = [CustomBadge customBadgeWithString:dateString
+                                          withStringColor:[UIColor blackColor]
+                                           withInsetColor:[UIColor orangeColor]
+                                           withBadgeFrame:YES
+                                      withBadgeFrameColor:[UIColor blackColor]
+                                                withScale:1.0
+                                              withShining:YES];
 		
 		[balloonView release];
 		[label release];
@@ -281,45 +321,86 @@
 	}
 	else
 	{
-		balloonView = (UIImageView *)[[cell.contentView viewWithTag:0] viewWithTag:1];
+        balloonView = (UIImageView *)[[cell.contentView viewWithTag:0] viewWithTag:1];
 		label = (UILabel *)[[cell.contentView viewWithTag:0] viewWithTag:2];
 	}
 	
-    TextMessage *textMsg = [self.messages objectAtIndex:indexPath.row];
+//    ChatContent *textMsg = [self.messages objectAtIndex:indexPath.row];
 	NSString *text = textMsg.text;
 	CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:14.0] constrainedToSize:CGSizeMake(240.0f, 480.0f) lineBreakMode:NSLineBreakByWordWrapping];
 	
 	UIImage *balloon;
     // Messge type: Sent or Received
-    if (textMsg.type == eReceived) {
-        balloonView.frame = CGRectMake(320.0f - (size.width + 28.0f), 2.0f, size.width + 28.0f, size.height + 15.0f);
+    if (textMsg.type == eChatIncoming) {
+        [customBadge5 setFrame:CGRectMake(self.view.frame.size.width/2-customBadge5.frame.size.width/2, 1.0f, customBadge5.frame.size.width, customBadge5.frame.size.height)];
+        balloonView.frame = CGRectMake(320.0f - (size.width + 28.0f), 2.0f + customBadge5.frame.size.height, size.width + 28.0f, size.height + 15.0f);
 		balloon = [[UIImage imageNamed:@"MessageBubbleBlue.png"] stretchableImageWithLeftCapWidth:15 topCapHeight:13];
-		label.frame = CGRectMake(307.0f - (size.width + 5.0f), 8.0f, size.width + 5.0f, size.height);
+		label.frame = CGRectMake(307.0f - (size.width + 5.0f), 8.0f + customBadge5.frame.size.height, size.width + 5.0f, size.height);
     } else {
-        balloonView.frame = CGRectMake(0.0, 2.0, size.width + 28, size.height + 15);
+        [customBadge5 setFrame:CGRectMake(self.view.frame.size.width/2-customBadge5.frame.size.width/2, 1.0f, customBadge5.frame.size.width, customBadge5.frame.size.height)];
+        balloonView.frame = CGRectMake(0.0, 2.0 + customBadge5.frame.size.height, size.width + 28, size.height + 15);
 		balloon = [[UIImage imageNamed:@"MessageBubbleGray.png"] stretchableImageWithLeftCapWidth:23 topCapHeight:15];
-		label.frame = CGRectMake(16, 8, size.width + 5, size.height);
+		label.frame = CGRectMake(16, 8 + customBadge5.frame.size.height, size.width + 5, size.height);
     }
 
 	balloonView.image = balloon;
 	label.text = text;
+    [cell addSubview:customBadge5];
+
 	
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TextMessage *textMsg = [self.messages objectAtIndex:indexPath.row];
+    ChatContent *textMsg = [self.messages objectAtIndex:indexPath.row];
 	NSString *body = textMsg.text;
 	CGSize size = [body sizeWithFont:[UIFont systemFontOfSize:14.0] constrainedToSize:CGSizeMake(240.0, 480.0) lineBreakMode:NSLineBreakByWordWrapping];
-	return size.height + 15;
+	return size.height + 15 + 25;
 }
 
 #pragma mark -
-#pragma mark socketIO methods
-- (void)socketIOReceiveMessage:(NSNotification *)notification {
-    TextMessage *msg = notification.object;
-    if (msg.type == eReceived)
-        [self addToChattingList:msg];
+#pragma mark Messaging methods
+- (void)messagingReceiveMessage:(NSNotification *)notification {
+    Message *msg = notification.object;
+    if ([msg.type isEqualToString:TYPE_TEXT]) {
+        TextMessage* text = (TextMessage*)msg;
+        if (text.content.type == eChatIncoming
+            && [text.content.peerId intValue] == _contact.contact.contactId)
+            [self addToChattingList:text.content];
+    }
+}
+
+#pragma mark -
+#pragma mark UIScrollViewDelegate Methods
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.refreshMsgHistoryHeaderView egoRefreshScrollViewDidScroll:scrollView];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self.refreshMsgHistoryHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
+}
+
+#pragma mark -
+#pragma mark  EGORefreshTableHeaderDelegate methods
+- (void)requestHistoryDone {
+    self.isLoadingHistory = NO;
+    [self.refreshMsgHistoryHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.chattingListView];
+    [self.refreshMsgHistoryHeaderView refreshLabelText];
+}
+
+- (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view {
+    // TODO: refresh if any history record.
+    self.isLoadingHistory = YES;
+    [self performSelector:@selector(requestHistoryDone) withObject:nil afterDelay:10];
+}
+
+- (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view {
+    return self.isLoadingHistory;
+}
+
+- (NSString*)egoRefreshTableHeaderLabelText:(EGORefreshTableHeaderView*)view {
+    // TODO: Set different text label
+    return @"Previous messages";
 }
 
 #pragma mark -
@@ -332,15 +413,14 @@
 
 - (void) viewWillDisappear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:YES];
+    [[CurrentChattingManager sharedInstance] setCurrentUser:0];
 }
 
 - (void)dealloc {
     [_contact release];
-    [self.chattingList release];
-    [self.containerView release];
-    [self.textView release];
-    [self.chattingList release];
-    [self.containerView release];
+    [_chattingListView release];
+    [_containerView release];
+    [_textView release];
     [super dealloc];
 }
 @end

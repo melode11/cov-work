@@ -1,6 +1,6 @@
 workspace './services.xcworkspace'
 
-platform :ios
+platform :ios, "5.0"
 
 pod 'ASIHTTPRequest', '~>1.8' 
 pod 'TomFastMath', :podspec => './TomFastMath.podspec'

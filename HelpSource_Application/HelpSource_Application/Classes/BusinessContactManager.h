@@ -9,6 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "BusinessContact.h"
 
+@class BusinessContactManager;
+
+@protocol BusinessContactDelegate <NSObject>
+
+@required
+-(void) contactStatusDidChange:(BusinessContact*) changedContact;
+
+@end
+
 
 @interface BusinessContactManager : NSObject
 {
@@ -30,5 +39,7 @@
 @property (nonatomic,readonly) NSArray* businessContacts;
 
 @property (nonatomic,readonly) NSArray* businessContactsInAlphabeticOrder;
+
+@property (nonatomic,assign) id<BusinessContactDelegate> delegate;
 
 @end

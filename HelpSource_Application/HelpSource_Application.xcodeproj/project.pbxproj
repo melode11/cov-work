@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AABB83117A5F3AB002BAAB5 /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AABB83017A5F3AB002BAAB5 /* AirshipConfig.plist */; };
+		0AABB84C17A5FE86002BAAB5 /* PushNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AABB84B17A5FE86002BAAB5 /* PushNotificationManager.m */; };
+		0AABB85117A600C4002BAAB5 /* UIViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AABB85017A600C4002BAAB5 /* UIViewUtils.m */; };
+		4E0EA46E17B1F2340009FED9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0EA46D17B1F2340009FED9 /* AudioToolbox.framework */; };
 		4E1BADF0179D155A007A4B9C /* ChattingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BADEF179D155A007A4B9C /* ChattingViewController.m */; };
 		4E1BAE00179D156E007A4B9C /* MessageEntryBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E1BADF8179D156E007A4B9C /* MessageEntryBackground.png */; };
 		4E1BAE01179D156E007A4B9C /* MessageEntryBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E1BADF9179D156E007A4B9C /* MessageEntryBackground@2x.png */; };
@@ -18,6 +22,8 @@
 		4E1BAE07179D156E007A4B9C /* MessageEntrySendButtonPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E1BADFF179D156E007A4B9C /* MessageEntrySendButtonPressed@2x.png */; };
 		4E1BAE0D179D15A2007A4B9C /* HPGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BAE0A179D15A2007A4B9C /* HPGrowingTextView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		4E1BAE0E179D15A2007A4B9C /* HPTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BAE0C179D15A2007A4B9C /* HPTextViewInternal.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		4E238C5B17B0E4B4006F90F2 /* CurrentChattingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E238C5817B0E4B4006F90F2 /* CurrentChattingManager.m */; };
+		4E238C5C17B0E4B4006F90F2 /* CurrentMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E238C5A17B0E4B4006F90F2 /* CurrentMessages.m */; };
 		4ED4CF1A179E3DA50088DF8F /* MessageBubbleBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ED4CF16179E3DA50088DF8F /* MessageBubbleBlue.png */; };
 		4ED4CF1B179E3DA50088DF8F /* MessageBubbleBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ED4CF17179E3DA50088DF8F /* MessageBubbleBlue@2x.png */; };
 		4ED4CF1C179E3DA50088DF8F /* MessageBubbleGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ED4CF18179E3DA50088DF8F /* MessageBubbleGray.png */; };
@@ -71,6 +77,7 @@
 		81CB0EC7179E6B8700425333 /* alphabet-divider-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 81CB0EC5179E6B8700425333 /* alphabet-divider-bar.png */; };
 		81CB0EC8179E6B8700425333 /* alphabet-divider-bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81CB0EC6179E6B8700425333 /* alphabet-divider-bar@2x.png */; };
 		81CB0F1B179FB65500425333 /* BusinessContactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CB0F1A179FB65500425333 /* BusinessContactManager.m */; };
+		B19EC30B17B203990085DC60 /* CustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = B19EC30917B203990085DC60 /* CustomBadge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -242,69 +249,6 @@
 			remoteGlobalIDString = 81B5954E174B115300E50482;
 			remoteInfo = ServerAgents;
 		};
-		8133499517A0C77F004EE1B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FA01AAE40BE34350BB99FF95;
-			remoteInfo = "Pods-ASIHTTPRequest";
-		};
-		8133499717A0C77F004EE1B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E2BCA8F30A2B4634BE1B8858;
-			remoteInfo = "Pods-CocoaLumberjack";
-		};
-		8133499917A0C77F004EE1B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4229C95CBCD4435801F4F8A;
-			remoteInfo = "Pods-Reachability";
-		};
-		8133499B17A0C77F004EE1B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 22F31C5F4E654761A529986F;
-			remoteInfo = "Pods-SBJson";
-		};
-		8133499D17A0C77F004EE1B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 146D70F3C3864F7BB81A8AC1;
-			remoteInfo = "Pods-SocketRocket";
-		};
-		8133499F17A0C77F004EE1B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F2B9C215D7D74288A68BEB72;
-			remoteInfo = "Pods-TomCrypt";
-		};
-		813349A117A0C77F004EE1B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B782BFC544EC49D1B4B99DFE;
-			remoteInfo = "Pods-TomFastMath";
-		};
-		813349A317A0C77F004EE1B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 557D2C561CD54FFCAA13BB35;
-			remoteInfo = "Pods-UrbanAirship-iOS-SDK";
-		};
-		813349A517A0C77F004EE1B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C9E62399C11D4E1C93B08A81;
-			remoteInfo = "Pods-socket.IO";
-		};
 		813349A717A0C77F004EE1B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
@@ -316,7 +260,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8C0C81875F8B4DC797BD66A4;
+			remoteGlobalIDString = 14DAAED96B39465783278215;
 			remoteInfo = Pods;
 		};
 		81B597EA174CBA2B00E50482 /* PBXContainerItemProxy */ = {
@@ -326,9 +270,78 @@
 			remoteGlobalIDString = 81B597C4174CBA2A00E50482;
 			remoteInfo = HelpSource_Application;
 		};
+		B19EC2F417B203830085DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 927F7BBDC2004AAB8B0B888E;
+			remoteInfo = "Pods-ASIHTTPRequest";
+		};
+		B19EC2F617B203830085DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B0BF8E236B584A1EABF761AD;
+			remoteInfo = "Pods-CocoaLumberjack";
+		};
+		B19EC2F817B203830085DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8143B39C5B34D928D875972;
+			remoteInfo = "Pods-Reachability";
+		};
+		B19EC2FA17B203830085DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6EC85A3E901047189882DD1B;
+			remoteInfo = "Pods-SBJson";
+		};
+		B19EC2FC17B203830085DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EC0BEFBF463342DA85E456A0;
+			remoteInfo = "Pods-SocketRocket";
+		};
+		B19EC2FE17B203830085DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1256259E25B54114BBC69CA3;
+			remoteInfo = "Pods-TomCrypt";
+		};
+		B19EC30017B203830085DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 144E46C94EB54B0E9D3AF76E;
+			remoteInfo = "Pods-TomFastMath";
+		};
+		B19EC30217B203830085DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F5F3AFF80F594E329B7C8C95;
+			remoteInfo = "Pods-UrbanAirship-iOS-SDK";
+		};
+		B19EC30417B203830085DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8133498817A0C77F004EE1B2 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8101A1FA683C46B18EFFA469;
+			remoteInfo = "Pods-socket.IO";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AABB83017A5F3AB002BAAB5 /* AirshipConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = AirshipConfig.plist; sourceTree = "<group>"; };
+		0AABB84A17A5FE86002BAAB5 /* PushNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushNotificationManager.h; path = Notification/PushNotificationManager.h; sourceTree = "<group>"; };
+		0AABB84B17A5FE86002BAAB5 /* PushNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PushNotificationManager.m; path = Notification/PushNotificationManager.m; sourceTree = "<group>"; };
+		0AABB84F17A600C4002BAAB5 /* UIViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIViewUtils.h; path = UIView/UIViewUtils.h; sourceTree = "<group>"; };
+		0AABB85017A600C4002BAAB5 /* UIViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIViewUtils.m; path = UIView/UIViewUtils.m; sourceTree = "<group>"; };
+		4E0EA46D17B1F2340009FED9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4E1BADEE179D155A007A4B9C /* ChattingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChattingViewController.h; sourceTree = "<group>"; };
 		4E1BADEF179D155A007A4B9C /* ChattingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChattingViewController.m; sourceTree = "<group>"; };
 		4E1BADF8179D156E007A4B9C /* MessageEntryBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MessageEntryBackground.png; sourceTree = "<group>"; };
@@ -343,6 +356,10 @@
 		4E1BAE0A179D15A2007A4B9C /* HPGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HPGrowingTextView.m; path = GrowingText/HPGrowingTextView.m; sourceTree = "<group>"; };
 		4E1BAE0B179D15A2007A4B9C /* HPTextViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HPTextViewInternal.h; path = GrowingText/HPTextViewInternal.h; sourceTree = "<group>"; };
 		4E1BAE0C179D15A2007A4B9C /* HPTextViewInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HPTextViewInternal.m; path = GrowingText/HPTextViewInternal.m; sourceTree = "<group>"; };
+		4E238C5717B0E4B4006F90F2 /* CurrentChattingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrentChattingManager.h; path = CurrentChatting/CurrentChattingManager.h; sourceTree = "<group>"; };
+		4E238C5817B0E4B4006F90F2 /* CurrentChattingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrentChattingManager.m; path = CurrentChatting/CurrentChattingManager.m; sourceTree = "<group>"; };
+		4E238C5917B0E4B4006F90F2 /* CurrentMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrentMessages.h; path = CurrentChatting/CurrentMessages.h; sourceTree = "<group>"; };
+		4E238C5A17B0E4B4006F90F2 /* CurrentMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrentMessages.m; path = CurrentChatting/CurrentMessages.m; sourceTree = "<group>"; };
 		4ED4CF16179E3DA50088DF8F /* MessageBubbleBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MessageBubbleBlue.png; sourceTree = "<group>"; };
 		4ED4CF17179E3DA50088DF8F /* MessageBubbleBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MessageBubbleBlue@2x.png"; sourceTree = "<group>"; };
 		4ED4CF18179E3DA50088DF8F /* MessageBubbleGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MessageBubbleGray.png; sourceTree = "<group>"; };
@@ -409,6 +426,8 @@
 		81CB0EC6179E6B8700425333 /* alphabet-divider-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alphabet-divider-bar@2x.png"; sourceTree = "<group>"; };
 		81CB0F19179FB65500425333 /* BusinessContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessContactManager.h; sourceTree = "<group>"; };
 		81CB0F1A179FB65500425333 /* BusinessContactManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessContactManager.m; sourceTree = "<group>"; };
+		B19EC30917B203990085DC60 /* CustomBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBadge.m; sourceTree = "<group>"; };
+		B19EC30A17B203990085DC60 /* CustomBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBadge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -416,6 +435,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E0EA46E17B1F2340009FED9 /* AudioToolbox.framework in Frameworks */,
 				813349BE17A0D4BD004EE1B2 /* QuartzCore.framework in Frameworks */,
 				813349AB17A0C988004EE1B2 /* libPods.a in Frameworks */,
 				81CB0EA0179E493800425333 /* ImageIO.framework in Frameworks */,
@@ -446,6 +466,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AABB84317A5F9B8002BAAB5 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				0AABB84F17A600C4002BAAB5 /* UIViewUtils.h */,
+				0AABB85017A600C4002BAAB5 /* UIViewUtils.m */,
+			);
+			name = UIView;
+			sourceTree = "<group>";
+		};
+		0AABB84917A5FDEE002BAAB5 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				0AABB84A17A5FE86002BAAB5 /* PushNotificationManager.h */,
+				0AABB84B17A5FE86002BAAB5 /* PushNotificationManager.m */,
+			);
+			name = Notification;
+			sourceTree = "<group>";
+		};
 		4E1BAE08179D157A007A4B9C /* GrowingText */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,6 +493,17 @@
 				4E1BAE0C179D15A2007A4B9C /* HPTextViewInternal.m */,
 			);
 			name = GrowingText;
+			sourceTree = "<group>";
+		};
+		4E238C6517B0E4BA006F90F2 /* CurrentChatting */ = {
+			isa = PBXGroup;
+			children = (
+				4E238C5717B0E4B4006F90F2 /* CurrentChattingManager.h */,
+				4E238C5817B0E4B4006F90F2 /* CurrentChattingManager.m */,
+				4E238C5917B0E4B4006F90F2 /* CurrentMessages.h */,
+				4E238C5A17B0E4B4006F90F2 /* CurrentMessages.m */,
+			);
+			name = CurrentChatting;
 			sourceTree = "<group>";
 		};
 		810284B91797DC0900227AFD /* Products */ = {
@@ -514,6 +563,7 @@
 		8102850C1798EA1C00227AFD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0AABB83017A5F3AB002BAAB5 /* AirshipConfig.plist */,
 				8102850D1798EA1C00227AFD /* Images */,
 			);
 			path = Resources;
@@ -575,15 +625,15 @@
 		8133498917A0C77F004EE1B2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8133499617A0C77F004EE1B2 /* libPods-ASIHTTPRequest.a */,
-				8133499817A0C77F004EE1B2 /* libPods-CocoaLumberjack.a */,
-				8133499A17A0C77F004EE1B2 /* libPods-Reachability.a */,
-				8133499C17A0C77F004EE1B2 /* libPods-SBJson.a */,
-				8133499E17A0C77F004EE1B2 /* libPods-SocketRocket.a */,
-				813349A017A0C77F004EE1B2 /* libPods-TomCrypt.a */,
-				813349A217A0C77F004EE1B2 /* libPods-TomFastMath.a */,
-				813349A417A0C77F004EE1B2 /* libPods-UrbanAirship-iOS-SDK.a */,
-				813349A617A0C77F004EE1B2 /* libPods-socket.IO.a */,
+				B19EC2F517B203830085DC60 /* libPods-ASIHTTPRequest.a */,
+				B19EC2F717B203830085DC60 /* libPods-CocoaLumberjack.a */,
+				B19EC2F917B203830085DC60 /* libPods-Reachability.a */,
+				B19EC2FB17B203830085DC60 /* libPods-SBJson.a */,
+				B19EC2FD17B203830085DC60 /* libPods-SocketRocket.a */,
+				B19EC2FF17B203830085DC60 /* libPods-TomCrypt.a */,
+				B19EC30117B203830085DC60 /* libPods-TomFastMath.a */,
+				B19EC30317B203830085DC60 /* libPods-UrbanAirship-iOS-SDK.a */,
+				B19EC30517B203830085DC60 /* libPods-socket.IO.a */,
 				813349A817A0C77F004EE1B2 /* libPods.a */,
 			);
 			name = Products;
@@ -605,6 +655,10 @@
 		8161521817961EB500B0B6D6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B19EC2E517B203820085DC60 /* CustomBadge */,
+				4E238C6517B0E4BA006F90F2 /* CurrentChatting */,
+				0AABB84917A5FDEE002BAAB5 /* Notification */,
+				0AABB84317A5F9B8002BAAB5 /* UIView */,
 				813349B317A0D10E004EE1B2 /* TipAlertView */,
 				81CB0F18179FB61400425333 /* BusinessContacts */,
 				4E1BAE08179D157A007A4B9C /* GrowingText */,
@@ -629,6 +683,7 @@
 		81B597BC174CBA2A00E50482 = {
 			isa = PBXGroup;
 			children = (
+				4E0EA46D17B1F2340009FED9 /* AudioToolbox.framework */,
 				813349BD17A0D4BD004EE1B2 /* QuartzCore.framework */,
 				81B59829174CC78D00E50482 /* Pods.xcconfig */,
 				81B597CE174CBA2B00E50482 /* HelpSource_Application */,
@@ -723,6 +778,15 @@
 				81CB0F1A179FB65500425333 /* BusinessContactManager.m */,
 			);
 			name = BusinessContacts;
+			sourceTree = "<group>";
+		};
+		B19EC2E517B203820085DC60 /* CustomBadge */ = {
+			isa = PBXGroup;
+			children = (
+				B19EC30917B203990085DC60 /* CustomBadge.m */,
+				B19EC30A17B203990085DC60 /* CustomBadge.h */,
+			);
+			name = CustomBadge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -952,74 +1016,74 @@
 			remoteRef = 8102855F179D1F7200227AFD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		8133499617A0C77F004EE1B2 /* libPods-ASIHTTPRequest.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libPods-ASIHTTPRequest.a";
-			remoteRef = 8133499517A0C77F004EE1B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8133499817A0C77F004EE1B2 /* libPods-CocoaLumberjack.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libPods-CocoaLumberjack.a";
-			remoteRef = 8133499717A0C77F004EE1B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8133499A17A0C77F004EE1B2 /* libPods-Reachability.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libPods-Reachability.a";
-			remoteRef = 8133499917A0C77F004EE1B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8133499C17A0C77F004EE1B2 /* libPods-SBJson.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libPods-SBJson.a";
-			remoteRef = 8133499B17A0C77F004EE1B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8133499E17A0C77F004EE1B2 /* libPods-SocketRocket.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libPods-SocketRocket.a";
-			remoteRef = 8133499D17A0C77F004EE1B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		813349A017A0C77F004EE1B2 /* libPods-TomCrypt.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libPods-TomCrypt.a";
-			remoteRef = 8133499F17A0C77F004EE1B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		813349A217A0C77F004EE1B2 /* libPods-TomFastMath.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libPods-TomFastMath.a";
-			remoteRef = 813349A117A0C77F004EE1B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		813349A417A0C77F004EE1B2 /* libPods-UrbanAirship-iOS-SDK.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libPods-UrbanAirship-iOS-SDK.a";
-			remoteRef = 813349A317A0C77F004EE1B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		813349A617A0C77F004EE1B2 /* libPods-socket.IO.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libPods-socket.IO.a";
-			remoteRef = 813349A517A0C77F004EE1B2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		813349A817A0C77F004EE1B2 /* libPods.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libPods.a;
 			remoteRef = 813349A717A0C77F004EE1B2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B19EC2F517B203830085DC60 /* libPods-ASIHTTPRequest.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-ASIHTTPRequest.a";
+			remoteRef = B19EC2F417B203830085DC60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B19EC2F717B203830085DC60 /* libPods-CocoaLumberjack.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-CocoaLumberjack.a";
+			remoteRef = B19EC2F617B203830085DC60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B19EC2F917B203830085DC60 /* libPods-Reachability.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-Reachability.a";
+			remoteRef = B19EC2F817B203830085DC60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B19EC2FB17B203830085DC60 /* libPods-SBJson.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-SBJson.a";
+			remoteRef = B19EC2FA17B203830085DC60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B19EC2FD17B203830085DC60 /* libPods-SocketRocket.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-SocketRocket.a";
+			remoteRef = B19EC2FC17B203830085DC60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B19EC2FF17B203830085DC60 /* libPods-TomCrypt.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-TomCrypt.a";
+			remoteRef = B19EC2FE17B203830085DC60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B19EC30117B203830085DC60 /* libPods-TomFastMath.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-TomFastMath.a";
+			remoteRef = B19EC30017B203830085DC60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B19EC30317B203830085DC60 /* libPods-UrbanAirship-iOS-SDK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-UrbanAirship-iOS-SDK.a";
+			remoteRef = B19EC30217B203830085DC60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B19EC30517B203830085DC60 /* libPods-socket.IO.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-socket.IO.a";
+			remoteRef = B19EC30417B203830085DC60 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1062,6 +1126,7 @@
 				4ED4CF1D179E3DA50088DF8F /* MessageBubbleGray@2x.png in Resources */,
 				81CB0EC7179E6B8700425333 /* alphabet-divider-bar.png in Resources */,
 				81CB0EC8179E6B8700425333 /* alphabet-divider-bar@2x.png in Resources */,
+				0AABB83117A5F3AB002BAAB5 /* AirshipConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1108,6 +1173,11 @@
 				813349BA17A0D10E004EE1B2 /* EGORefreshTableHeaderView.m in Sources */,
 				813349BB17A0D10E004EE1B2 /* IndicatorLoadDataView.m in Sources */,
 				813349BC17A0D10E004EE1B2 /* TipAlertView.m in Sources */,
+				0AABB84C17A5FE86002BAAB5 /* PushNotificationManager.m in Sources */,
+				0AABB85117A600C4002BAAB5 /* UIViewUtils.m in Sources */,
+				4E238C5B17B0E4B4006F90F2 /* CurrentChattingManager.m in Sources */,
+				4E238C5C17B0E4B4006F90F2 /* CurrentMessages.m in Sources */,
+				B19EC30B17B203990085DC60 /* CustomBadge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

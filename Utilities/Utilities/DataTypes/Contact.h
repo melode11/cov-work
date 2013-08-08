@@ -21,4 +21,6 @@
 
 @property (nonatomic) NSInteger type;
 
+@property (nonatomic, assign) NSInteger missedMsgCount;
+
 @end

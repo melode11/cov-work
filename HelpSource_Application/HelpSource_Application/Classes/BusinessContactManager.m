@@ -8,11 +8,14 @@
 
 #import "BusinessContactManager.h"
 #import "DataPersist/DataPersist.h"
+#import "Messaging/Messaging.h"
+#import "Messaging/Message.h"
+#import "Messaging/PresenceMessage.h"
 
 static BusinessContactManager* sharedInstance = nil;
 
 @interface BusinessContactManager ()
-
+-(void)notifyStatusChange:(NSNotification*)notification;
 @end
 
 @implementation BusinessContactManager
@@ -48,6 +51,8 @@ static BusinessContactManager* sharedInstance = nil;
                                        NSInteger cid2 = ((BusinessContact*)obj2).contact.contactId;
                                        return cid1<cid2?NSOrderedAscending:cid1 == cid2?NSOrderedSame:NSOrderedDescending;
                                    });
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifyStatusChange:) name:kSocketServerMsgReceived object:nil];
         
     }
     return self;
@@ -114,8 +119,10 @@ static BusinessContactManager* sharedInstance = nil;
         BusinessContact* bscontact = ((BusinessContact*)[_sortedBusinessContacts objectAtIndex:index]);
         bscontact.activeDevices = activeDevices;
         [bscontact setStatusFlags:status];
+        [_delegate contactStatusDidChange:bscontact];
     }
     [item release];
+
 }
 
 -(NSArray *)businessContactsInAlphabeticOrder
@@ -163,8 +170,26 @@ static BusinessContactManager* sharedInstance = nil;
     return _sortedBusinessContacts;
 }
 
+-(void)notifyStatusChange:(NSNotification*)notification
+{
+    Message* msg = notification.object;
+    if([msg.type isEqualToString:TYPE_NOTIFICATION])
+    {
+        NotificationMessage* note = (NotificationMessage*)msg;
+        if([note.notificationType isEqualToString:NOTIFICATION_PRESENCE])
+        {
+            PresenceMessage* presence = (PresenceMessage*)note;
+            Contact* compareContact = [[Contact alloc] init];
+            compareContact.contactId = [presence.userId integerValue];
+            [self updateStatus:presence.status andDevices:nil forContact:compareContact];
+            [compareContact release];
+        }
+    }
+}
+
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [_sortedBusinessContacts release];
     [_alphabeticBusinessContacts release];
     Block_release(_idComparator);

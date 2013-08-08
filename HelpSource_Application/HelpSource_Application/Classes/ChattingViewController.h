@@ -9,13 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "HPGrowingTextView.h"
 #import "BusinessContact.h"
+#import "EGORefreshTableHeaderView.h"
 
-@interface ChattingViewController : UIViewController <HPGrowingTextViewDelegate>{
+@interface ChattingViewController : UIViewController <HPGrowingTextViewDelegate, EGORefreshTableHeaderDelegate>{
 	UIView *_containerView;
     HPGrowingTextView *_textView;
-    IBOutlet UITableView *_chattingList;
+    IBOutlet UITableView *_chattingListView;
     NSMutableArray *_messages;
-
+    EGORefreshTableHeaderView *refreshMsgHistoryHeaderView;
+    
     BusinessContact *_contact;
 }
 

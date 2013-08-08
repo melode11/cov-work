@@ -34,7 +34,7 @@
     self.userName = [user objectForKey:@"username"];
     self.displayName = [user objectForKey:@"display_name"];
     self.messagingServer = [ServerModelBuilder buildFromDict:[[dict objectForKey:@"server"] objectForKey:@"messaging"]];
-    self.userId = [[user objectForKey:@"id"] integerValue];
+    self.userId = [[user objectForKey:@"user_id"] integerValue];
 }
 
 - (void)dealloc

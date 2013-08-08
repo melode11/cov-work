@@ -10,19 +10,29 @@
 #import "SocketIOPacket.h"
 #import "Message.h"
 #import "TextMessage.h"
+#import "ParamsMessage.h"
+#import "PresenceMessage.h"
 
 #define ID_PREFIX @"test-"
 
 @interface Messaging ()
 @property (nonatomic, retain) SocketIO * chatSockIO;
+@property (nonatomic, retain) NSString * host;
 @property (nonatomic, retain) NSString* userId;
+@property (nonatomic, retain) NSString * userToken;
+@property (nonatomic, assign) NSInteger port;
 @property (nonatomic, retain) NSMutableArray * msgWaitingAckArray;
 @property NSInteger msgCount;
+@property BOOL isReconnectNeed;
 @end
 
 @implementation Messaging
 @synthesize chatSockIO = _chatSockIO;
+@synthesize host = _host;
 @synthesize userId = _userId;
+@synthesize userToken = _userToken;
+@synthesize port = _port;
+@synthesize isReconnectNeed = _isReconnectNeed;
 
 static Messaging* sharedMessageInstance = nil;
 
@@ -30,9 +40,12 @@ static Messaging* sharedMessageInstance = nil;
     if ((self = [super init])) {
         //setup request management objects
         _chatSockIO = nil;
+        _host = @"";
+        _userId = nil;
+        _userToken = @"";
+        _port = 0;
         _msgWaitingAckArray = [[NSMutableArray alloc] init];
         _msgCount = 0;
-        _userId = nil;
     }
     return self;
 }
@@ -71,24 +84,49 @@ static Messaging* sharedMessageInstance = nil;
     [params enumerateKeysAndObjectsUsingBlock: ^(id key, id value, BOOL *stop) {
         [urlParams setObject:[value stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] forKey:key];
     }];
+//    [urlParams setObject:self.userId forKey:@"uid"];
     [self.chatSockIO connectToHost:host onPort:port withParams:urlParams];
 }
 
 -(void)connectToMsgServer:(NSString*)host onPort:(NSInteger)port withToken:(NSString *)token userID:(NSString *)userID
 {
-    NSDictionary *params = [[NSDictionary alloc] initWithObjectsAndKeys:token, @"token", nil];
+    NSDictionary *params = [[NSDictionary alloc] initWithObjectsAndKeys:token, @"token", userID, @"uid", nil];
+    self.host = host;
+    self.port = port;
     self.userId = userID;
+    self.userToken = token;
+    self.isReconnectNeed = YES;
+    [self connectToMsgServer:host onPort:port withParams:params];
+}
+
+-(void)connectToMsgServer:(NSString*)host onPort:(NSInteger)port withToken:(NSString *)token userID:(NSString *)userID NeedReconnect:(BOOL)retry
+{
+    NSDictionary *params = [[NSDictionary alloc] initWithObjectsAndKeys:token, @"token", userID, @"uid", nil];
+    self.host = host;
+    self.port = port;
+    self.userId = userID;
+    self.userToken = token;
+    self.isReconnectNeed = retry;
     [self connectToMsgServer:host onPort:port withParams:params];
 }
 
 -(void)connectToMsgServer:(NSString*)host onPort:(NSInteger)port withToken:(NSString *)token userID:(NSString *)userID withNamespace:(NSString *)endpoint
 {
-    NSDictionary *params = [[NSDictionary alloc] initWithObjectsAndKeys:token, @"token", nil];
+    NSDictionary *params = [[NSDictionary alloc] initWithObjectsAndKeys:token, @"token", userID, @"uid", nil];
+    self.host = host;
+    self.port = port;
     self.userId = userID;
+    self.userToken = token;
+    self.isReconnectNeed = YES; 
     [self connectToMsgServer:host onPort:port withParams:params withNamespace:endpoint];
 }
 
+-(void)reconnectMsgServer {
+    [self connectToMsgServer:self.host onPort:self.port withToken:self.userToken userID:self.userId];
+}
+
 -(void)disconnectMsgServer {
+    self.isReconnectNeed = NO;
     [self.chatSockIO disconnect];
 }
 
@@ -119,11 +157,10 @@ static Messaging* sharedMessageInstance = nil;
                     [self.msgWaitingAckArray removeObject:msg];
                     NSLog(@"Array count %d", self.msgWaitingAckArray.count);
                 }
-            }
+            }   
         };
         self.msgCount++;
         msg.msgID = [NSString stringWithFormat:@"%@%d", ID_PREFIX, self.msgCount];
-        [msg.data setObject:msg.msgID forKey:@"id"];
         [_msgWaitingAckArray addObject:msg];
         [self.chatSockIO sendEvent:msg.type withData:msg.data andAcknowledge:cb];
     } else {
@@ -132,29 +169,19 @@ static Messaging* sharedMessageInstance = nil;
 }
 
 -(void)requestUserList {
-    Message *msg = [[Message alloc] init];
-    msg.type = @"r";
+
     NSMutableDictionary* dic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"user-list", @"name", nil];
-    msg.data = dic;
+    ParamsMessage *msg = [[ParamsMessage alloc] initWithParams:dic andType:@"r"];
     msg.needAck = YES;
     [self sendMsg:msg];
 }
 
--(void)sendTextMessage:(NSString*)text to:(NSInteger)userID {
-    Message *msg = [[Message alloc] init];
-    msg.type = @"t";
-    NSMutableDictionary* dic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:[NSString stringWithFormat:@"%d", userID], @"user_id", text, @"text",  nil];
-    msg.data = dic;
-    msg.needAck = YES;
-    [self sendMsg:msg];
-}
 
--(void)sendTextMessage:(TextMessage *)textMsg {
-    Message *msg = [[Message alloc] init];
+-(void)sendChatMessage:(ChatContent *)textMsg {
+
     if (textMsg.peerId && textMsg.text) {
-        msg.type = @"t";
-        NSMutableDictionary* dic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:[NSString stringWithFormat:@"%d", [textMsg.peerId intValue]], @"user_id", textMsg.text, @"text",  nil];
-        msg.data = dic;
+        TextMessage *msg = [[TextMessage alloc] init];
+        msg.content = textMsg;
         msg.needAck = YES;
         [self sendMsg:msg];
     }
@@ -169,7 +196,11 @@ static Messaging* sharedMessageInstance = nil;
 
 - (void) socketIODidDisconnect:(SocketIO *)socket disconnectedWithError:(NSError *)error {
     NSLog(@"socketIODidDisconnect");
-    [[NSNotificationCenter defaultCenter] postNotificationName:kSocketServerDisconnected object:nil];
+    if (self.isReconnectNeed) {
+        [self performSelector:@selector(reconnectMsgServer) withObject:nil afterDelay:10];
+    } else {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kSocketServerDisconnected object:nil];
+    }
 }
 
 - (void) socketIO:(SocketIO *)socket didReceiveMessage:(SocketIOPacket *)packet {
@@ -185,19 +216,33 @@ static Messaging* sharedMessageInstance = nil;
     NSDictionary *event = [packet dataAsJSON];
     NSString *type = [event objectForKey:@"name"];
     
-    if ([type isEqual:@"t"]) {
+    if ([type isEqual:TYPE_TEXT]) {
         NSArray *msgInfo = [event objectForKey:@"args"];
-        
-        TextMessage * textMsg = [[TextMessage alloc] init];
-        textMsg.userId = self.userId;
-        textMsg.peerId = [[msgInfo valueForKey:@"user_id"] lastObject];
-        textMsg.text = [[msgInfo valueForKey:@"text"] lastObject];
-        textMsg.timestamp = [[msgInfo valueForKey:@"ts"] lastObject];
-        textMsg.type = eReceived;
-        [[NSNotificationCenter defaultCenter] postNotificationName:kSocketServerMsgReceived object:textMsg];
-    } else if ([type isEqual:@"n"]) {
-        
+        for(NSDictionary* msgDic in msgInfo)
+        {
+            ChatContent * chat = [ChatContentBuilder buildFromDict:msgDic];
+            chat.userId = self.userId;
+            chat.type = eChatIncoming;
+            TextMessage *msg = [[TextMessage alloc]init];
+            msg.content = chat;
+            [[NSNotificationCenter defaultCenter] postNotificationName:kSocketServerMsgReceived object:msg];
+        }
     }
+    else if ([type isEqual:TYPE_NOTIFICATION]) {
+         NSArray *msgInfo = [event objectForKey:@"args"];
+        for(NSDictionary* msgDic in msgInfo)
+        {
+            NSString* notType = [msgDic objectForKey:@"type"];
+            if([notType isEqualToString:NOTIFICATION_PRESENCE])
+            {
+                PresenceMessage* pmsg = [[PresenceMessage alloc] initWithUserId:[msgDic objectForKey:@"user_id"] status:[[msgDic objectForKey:@"status"]integerValue] devices:[msgDic objectForKey:@"device"] timestamp:[msgDic objectForKey:@"ts"]];
+                [[NSNotificationCenter defaultCenter] postNotificationName:kSocketServerMsgReceived object:pmsg];
+            }
+        }
+    }
+    else if ([type isEqual:TYPE_CONTROL]) {
+    }
+ 
 }
 
 - (void) socketIO:(SocketIO *)socket didSendMessage:(SocketIOPacket *)packet {

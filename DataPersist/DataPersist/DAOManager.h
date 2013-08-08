@@ -16,6 +16,7 @@
 @class CrmodCallerDAO;
 @class AppVersionDAO;
 @class SecurityDAO;
+@class ChatDAO;
 
 @interface DAOManager : NSObject
 {
@@ -28,6 +29,7 @@
     CrmodCallerDAO *_crmodCallerDAO;
     AppVersionDAO *_appVersionDAO;
     SecurityDAO *_securityDAO;
+    ChatDAO *_chatDAO;
 }
 
 @property(readonly) PhoneBookDAO* phoneBookDAO;
@@ -47,6 +49,8 @@
 @property(readonly) AppVersionDAO *appVersionDAO;
 
 @property(readonly) SecurityDAO *securityDAO;
+
+@property(readonly) ChatDAO *chatDAO;
 
 +(DAOManager*) sharedInstance;
 

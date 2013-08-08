@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		811159C317B331390089D6F3 /* ChatDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 811159C217B331390089D6F3 /* ChatDAO.m */; };
+		811159C717B337400089D6F3 /* SqliteDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 811159C617B337400089D6F3 /* SqliteDatabasePool.m */; };
 		818A4182177963920015431F /* AppVersionDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41631779638E0015431F /* AppVersionDAO.m */; };
 		818A4183177963920015431F /* BaseDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41651779638E0015431F /* BaseDAO.m */; };
 		818A4184177963920015431F /* CallHistoryDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A41671779638F0015431F /* CallHistoryDAO.m */; };
@@ -121,6 +123,10 @@
 
 /* Begin PBXFileReference section */
 		810285E6179E461000227AFD /* Utilities.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Utilities.xcodeproj; path = ../Utilities/Utilities.xcodeproj; sourceTree = "<group>"; };
+		811159C117B331390089D6F3 /* ChatDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDAO.h; sourceTree = "<group>"; };
+		811159C217B331390089D6F3 /* ChatDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDAO.m; sourceTree = "<group>"; };
+		811159C517B337400089D6F3 /* SqliteDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteDatabasePool.h; sourceTree = "<group>"; };
+		811159C617B337400089D6F3 /* SqliteDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteDatabasePool.m; sourceTree = "<group>"; };
 		818A41621779638E0015431F /* AppVersionDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppVersionDAO.h; sourceTree = "<group>"; };
 		818A41631779638E0015431F /* AppVersionDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppVersionDAO.m; sourceTree = "<group>"; };
 		818A41641779638E0015431F /* BaseDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDAO.h; sourceTree = "<group>"; };
@@ -192,6 +198,8 @@
 			children = (
 				818A4170177963900015431F /* SqliteDatabaseWrapper.h */,
 				818A4171177963900015431F /* SqliteDatabaseWrapper.m */,
+				811159C517B337400089D6F3 /* SqliteDatabasePool.h */,
+				811159C617B337400089D6F3 /* SqliteDatabasePool.m */,
 			);
 			path = DbSupport;
 			sourceTree = "<group>";
@@ -268,6 +276,8 @@
 				81B595BF174C637700E50482 /* DataPersist.h */,
 				81B595C1174C637700E50482 /* DataPersist.m */,
 				81B595BD174C637700E50482 /* Supporting Files */,
+				811159C117B331390089D6F3 /* ChatDAO.h */,
+				811159C217B331390089D6F3 /* ChatDAO.m */,
 			);
 			path = DataPersist;
 			sourceTree = "<group>";
@@ -436,6 +446,8 @@
 				81CB0EDD179F6BFA00425333 /* ServerSettingDAO.m in Sources */,
 				81CB0EDE179F6BFA00425333 /* UserProfileDAO.m in Sources */,
 				81B595C2174C637700E50482 /* DataPersist.m in Sources */,
+				811159C317B331390089D6F3 /* ChatDAO.m in Sources */,
+				811159C717B337400089D6F3 /* SqliteDatabasePool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

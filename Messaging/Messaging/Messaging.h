@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SocketIO.h"
-#import "TextMessage.h"
+#import "Utilities/ChatContent.h"
 
 #define kSocketServerConnected @"socketServerConnected"
 #define kSocketServerDisconnected @"socketServerDisconnected"
@@ -18,20 +18,22 @@
 @class TextMessage;
 @interface Messaging : NSObject <SocketIODelegate> {
     SocketIO * _chatSockIO;
+    NSString * _host;
     NSString * _userId;
+    NSString * _userToken;
+    NSInteger _port;
+    BOOL _isReconnectNeed;
 }
 
 +(Messaging*) sharedInstance;
 
-//-(void)connectToMsgServer:(NSString*)host onPort:(NSInteger)port withParams:(NSDictionary *)params;
-//-(void)connectToMsgServer:(NSString*)host onPort:(NSInteger)port withParams:(NSDictionary *)params withNamespace:(NSString *)endpoint;
 -(void)connectToMsgServer:(NSString*)host onPort:(NSInteger)port withToken:(NSString *)token userID:(NSString *)userID;
+-(void)connectToMsgServer:(NSString*)host onPort:(NSInteger)port withToken:(NSString *)token userID:(NSString *)userID NeedReconnect:(BOOL)retry;
 -(void)connectToMsgServer:(NSString*)host onPort:(NSInteger)port withToken:(NSString *)token userID:(NSString *)userID withNamespace:(NSString *)endpoint;
 -(void)disconnectMsgServer;
 
 -(void)sendMsg:(Message *)msg;
 -(void)requestUserList;
--(void)sendTextMessage:(TextMessage *)textMsg;
-//-(void)sendTextMessage:(NSString *)text to:(NSInteger)userID;
+-(void)sendChatMessage:(ChatContent *)chatMsg;
 //-(void)sendControl
 @end

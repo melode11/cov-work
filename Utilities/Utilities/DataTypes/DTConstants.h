@@ -15,7 +15,7 @@ typedef enum {
 } SecureType;
 
 
-#define kContactId @"id"
+#define kContactId @"user_id"
 
 #define kContactName @"username"
 
@@ -32,6 +32,9 @@ typedef enum {
 #define kContactIsShortcut @"isshortcut"
 
 #define kContactDisplayName @"display_name"
+
+// TODO: missed count
+#define kContactMsgMissedCount @"missed_count"
 
 #define kProductGroupId @"groupid"
 
@@ -107,5 +110,15 @@ typedef enum {
 #define kServerModelPort @"port"
 
 #define kServerModelProtocol @"protocol"
+
+#define kChatContentUserId @"uid"
+
+#define kChatContentPeerId @"user_id"
+
+#define kChatContentTimestamp @"ts"
+
+#define kChatContentType @"type"
+
+#define kChatContentText @"text"
 
 #endif

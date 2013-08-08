@@ -99,6 +99,10 @@
 		8124E11A177ABC4500A0AFD7 /* CompatibilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8124E114177ABC0900A0AFD7 /* CompatibilityManager.m */; };
 		8124E11B177ABC4500A0AFD7 /* DeviceProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8124E10C177AB40500A0AFD7 /* DeviceProfile.m */; };
 		8124E148177C068700A0AFD7 /* CallTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8124E147177C068700A0AFD7 /* CallTimer.m */; };
+		81334AD417A76094004EE1B2 /* ChatContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 81334AD317A76094004EE1B2 /* ChatContent.m */; };
+		81334AD717A761DB004EE1B2 /* ChatContentBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 81334AD617A761DB004EE1B2 /* ChatContentBuilder.m */; };
+		81334AD817A7677F004EE1B2 /* ChatContentBuilder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 81334AD517A761DB004EE1B2 /* ChatContentBuilder.h */; };
+		81334AD917A7677F004EE1B2 /* ChatContent.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 81334AD217A76094004EE1B2 /* ChatContent.h */; };
 		8163EFCD177C06D200B92A00 /* CallTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8124E147177C068700A0AFD7 /* CallTimer.m */; };
 		818A414A177960710015431F /* ClientFeatureBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A4119177960710015431F /* ClientFeatureBuilder.m */; };
 		818A414B177960710015431F /* ContactBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 818A411B177960710015431F /* ContactBuilder.m */; };
@@ -155,6 +159,8 @@
 			dstPath = "foundation/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				81334AD817A7677F004EE1B2 /* ChatContentBuilder.h in CopyFiles */,
+				81334AD917A7677F004EE1B2 /* ChatContent.h in CopyFiles */,
 				81CB0ECF179E7AC100425333 /* ServerModelBuilder.h in CopyFiles */,
 				81CB0ED0179E7AC100425333 /* ServerModel.h in CopyFiles */,
 				81028576179E121300227AFD /* Base64EncoderDecoder.h in CopyFiles */,
@@ -231,6 +237,10 @@
 		8124E117177ABC1B00A0AFD7 /* Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
 		8124E146177C068700A0AFD7 /* CallTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallTimer.h; sourceTree = "<group>"; };
 		8124E147177C068700A0AFD7 /* CallTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallTimer.m; sourceTree = "<group>"; };
+		81334AD217A76094004EE1B2 /* ChatContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatContent.h; sourceTree = "<group>"; };
+		81334AD317A76094004EE1B2 /* ChatContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatContent.m; sourceTree = "<group>"; };
+		81334AD517A761DB004EE1B2 /* ChatContentBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatContentBuilder.h; sourceTree = "<group>"; };
+		81334AD617A761DB004EE1B2 /* ChatContentBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatContentBuilder.m; sourceTree = "<group>"; };
 		818A4118177960710015431F /* ClientFeatureBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientFeatureBuilder.h; sourceTree = "<group>"; };
 		818A4119177960710015431F /* ClientFeatureBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientFeatureBuilder.m; sourceTree = "<group>"; };
 		818A411A177960710015431F /* ContactBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactBuilder.h; sourceTree = "<group>"; };
@@ -420,6 +430,8 @@
 				818A4149177960710015431F /* videoproxyModel.m */,
 				81CB0EC9179E6FB200425333 /* ServerModel.h */,
 				81CB0ECA179E6FB200425333 /* ServerModel.m */,
+				81334AD217A76094004EE1B2 /* ChatContent.h */,
+				81334AD317A76094004EE1B2 /* ChatContent.m */,
 			);
 			path = DataTypes;
 			sourceTree = "<group>";
@@ -449,6 +461,8 @@
 				818A412B177960710015431F /* UserProfileBuilder.m */,
 				81CB0ECC179E707600425333 /* ServerModelBuilder.h */,
 				81CB0ECD179E707600425333 /* ServerModelBuilder.m */,
+				81334AD517A761DB004EE1B2 /* ChatContentBuilder.h */,
+				81334AD617A761DB004EE1B2 /* ChatContentBuilder.m */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -676,6 +690,8 @@
 				810284B41797BA7A00227AFD /* NSString+MD5.m in Sources */,
 				81CB0ECB179E6FB200425333 /* ServerModel.m in Sources */,
 				81CB0ECE179E707600425333 /* ServerModelBuilder.m in Sources */,
+				81334AD417A76094004EE1B2 /* ChatContent.m in Sources */,
+				81334AD717A761DB004EE1B2 /* ChatContentBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

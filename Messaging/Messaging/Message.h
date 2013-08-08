@@ -1,5 +1,5 @@
 //
-//  TextMessage.h
+//  Message.h
 //  Messaging
 //
 //  Created by ThemisKing on 7/17/13.
@@ -16,20 +16,20 @@ typedef enum _MessageType{
     eNotificationMsg
 } MessageType;
 
+extern NSString * const TYPE_TEXT;
+extern NSString * const TYPE_CONTROL;
+extern NSString * const TYPE_REQUEST;
+extern NSString * const TYPE_NOTIFICATION;
+
 @interface Message : NSObject {
-    NSString* _type;
-    NSString* _msgID;
-    NSMutableDictionary* _data;
-    BOOL _needAck;
-    NSArray* _types;
+
 }
 
-@property (nonatomic, retain) NSString* type;
-@property (nonatomic, retain) NSMutableDictionary* data;
+@property (nonatomic, readonly) NSString* type;
+@property (nonatomic, readonly) NSDictionary* data;
 @property (nonatomic, retain) NSString* msgID;
 @property BOOL needAck;
 
 - (id) init;
-- (id) initWithTypeIndex:(int)index;
 
 @end

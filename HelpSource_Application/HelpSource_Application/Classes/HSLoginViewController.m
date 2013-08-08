@@ -9,6 +9,7 @@
 #import "HSLoginViewController.h"
 #import "DataPersist/DataPersist.h"
 #import "Messaging/Messaging.h"
+#import <UrbanAirship-iOS-SDK/UAPush.h>
 
 @interface HSLoginViewController ()
 
@@ -100,11 +101,14 @@
         up.userId = [loginAgent userId];
         up.displayName = [loginAgent displayName];
         upDao.token = [loginAgent token];
+        upDao.userProfile = up;
+        [up release];
         [upDao store];
         
         [_activeIndicator stopAnimating];
         [self setVisibility:YES forViews:_inputViews, nil];
         [self setVisibility:NO forViews:_errorViews,_loadingViews, nil];
+        [[UAPush shared] setTags:[NSMutableArray arrayWithObject:up.name]];
         [self didAuthentication];
     }
 }

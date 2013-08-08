@@ -7,17 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-typedef enum _TextMessageType{
-    eSent = 1,
-    eReceived
-} TextMessageType;
+#import "Message.h"
+#import "Utilities/ChatContentBuilder.h"
 
-@interface TextMessage : NSObject
+@interface TextMessage : Message
 
-@property (nonatomic, retain) NSString *userId;
-@property (nonatomic, retain) NSString *peerId;
-@property (nonatomic) TextMessageType type;
-@property (nonatomic, retain) NSString *text;
-@property (nonatomic, retain) NSString *timestamp;
+@property (nonatomic, retain) ChatContent *content;
 
 @end

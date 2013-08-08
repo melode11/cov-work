@@ -14,7 +14,7 @@ typedef enum _SqliteColumnType
     eColumnTypeNull = SQLITE_NULL,
     eColumnTypeText = SQLITE_TEXT,
     eColumnTypeInteger = SQLITE_INTEGER,
-    eColumnTypeFoat = SQLITE_FLOAT,
+    eColumnTypeFloat = SQLITE_FLOAT,
     eColumnTypeBlob = SQLITE_BLOB
 }SqliteColumnType;
 

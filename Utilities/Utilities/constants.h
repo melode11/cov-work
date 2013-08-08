@@ -288,6 +288,16 @@
 #define kiPadDistributionApplicationMasterSecret        @"-PXvr0a9SDOjW1HhL8gJ3Q"
 // com.shanghai.helpsource.*
 
+
+// com.covidien.auroraii
+#define kDevelopmentApplicationKey                      @"2AHIYqlIS06k_DmXixMRPg"
+#define kDevelopmentApplicationSecret                   @"kwrMxqC2S8CWXOQeyMt3Rw"
+#define kDevelopmentApplicationMasterSecret             @"oAsEcNlbTW-6N1luEI0rbw"
+
+#define kDistributionApplicationKey                     @"wxhXJWQkTl6jyckZAGJ24w"
+#define kDistributionApplicationSecret                  @"2p2YB_bQS5GZ1BPtg2eM-A"
+#define kDistributionApplicationMasterSecret            @"vsQ4dXxJR-eEw6ji1P-3og"
+
 //Sip Information//
 
 //sip Gate Jim Power

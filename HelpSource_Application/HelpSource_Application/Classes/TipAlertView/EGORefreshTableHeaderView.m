@@ -122,11 +122,17 @@
 		[[NSUserDefaults standardUserDefaults] synchronize];
 		
 	} else {
-		
 		_lastUpdatedLabel.text = nil;
-		
 	}
+}
 
+- (void)refreshLabelText {
+	if ([_delegate respondsToSelector:@selector(egoRefreshTableHeaderLabelText:)]) {
+		NSString *labelText = [_delegate egoRefreshTableHeaderLabelText:self];
+		_lastUpdatedLabel.text = labelText;
+	} else {
+		_lastUpdatedLabel.text = nil;
+	}
 }
 
 - (void)setState:(EGOPullRefreshState)aState{

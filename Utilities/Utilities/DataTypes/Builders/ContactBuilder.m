@@ -19,6 +19,7 @@
     contact.name = [dict objectForKeyNullToNil:kContactName];
     contact.type = [[dict objectForKeyNullToNil:kContactType]intValue];
     contact.displayName = [dict objectForKeyNullToNil:kContactDisplayName];
+    contact.missedMsgCount = [[dict objectForKeyNullToNil:kContactMsgMissedCount] intValue];
     return contact;
 }
 
@@ -26,7 +27,7 @@
 {
     return [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%d",contact.contactId],kContactId,
             contact.name,kContactName,[NSNumber numberWithInt:contact.type],kContactType,
-            contact.displayName,kContactDisplayName,
+            contact.displayName,kContactDisplayName, contact.missedMsgCount, kContactMsgMissedCount,
             nil];
 }
 

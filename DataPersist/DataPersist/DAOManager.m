@@ -18,6 +18,7 @@
 #import "CrmodCallerDAO.h"
 #import "AppVersionDAO.h"
 #import "SecurityDAO.h"
+#import "ChatDAO.h"
 
 static DAOManager* sharedManagerInstance;
 
@@ -177,16 +178,17 @@ static DAOManager* sharedManagerInstance;
     return _appVersionDAO;
 }
 
--(SecurityDAO *)securityDAO
+-(ChatDAO *)chatDAO
 {
-    if(_securityDAO == nil){
+    if(_chatDAO == nil){
         @synchronized(self){
-            if(_securityDAO == nil){
-                _securityDAO = [[SecurityDAO alloc] init];
+            if(_chatDAO == nil){
+                NSString* path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+                _chatDAO = [[ChatDAO alloc] initWithPath:path];
             }
         }
     }
-    return _securityDAO;
+    return _chatDAO;
 }
 
 @end

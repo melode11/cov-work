@@ -10,6 +10,13 @@
 		4E0DF6E91797BE2B00733CD4 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0DF6E81797BE2B00733CD4 /* Message.m */; };
 		4ED4CF64179E590E0088DF8F /* TextMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED4CF63179E590E0088DF8F /* TextMessage.m */; };
 		4ED4CF66179E5B050088DF8F /* TextMessage.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4ED4CF62179E590E0088DF8F /* TextMessage.h */; };
+		81334ADC17A76D53004EE1B2 /* ParamsMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 81334ADB17A76D52004EE1B2 /* ParamsMessage.m */; };
+		81334AE317A776EB004EE1B2 /* PresenceMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 81334AE217A776E9004EE1B2 /* PresenceMessage.m */; };
+		81334AE617A77892004EE1B2 /* NotificationMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 81334AE517A77892004EE1B2 /* NotificationMessage.m */; };
+		81334AE717A77F6B004EE1B2 /* Message.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4E0DF6E71797BE2B00733CD4 /* Message.h */; };
+		81334AE817A77F6B004EE1B2 /* ParamsMessage.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 81334ADA17A76D52004EE1B2 /* ParamsMessage.h */; };
+		81334AE917A77F6B004EE1B2 /* PresenceMessage.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 81334AE117A776E8004EE1B2 /* PresenceMessage.h */; };
+		81334AEA17A77F6B004EE1B2 /* NotificationMessage.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 81334AE417A77891004EE1B2 /* NotificationMessage.h */; };
 		81B59628174C644600E50482 /* Messaging.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 81B59627174C644600E50482 /* Messaging.h */; };
 		81B5962A174C644600E50482 /* Messaging.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B59629174C644600E50482 /* Messaging.m */; };
 		81B59632174C644600E50482 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B59631174C644600E50482 /* SenTestingKit.framework */; };
@@ -58,6 +65,10 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				81334AE717A77F6B004EE1B2 /* Message.h in CopyFiles */,
+				81334AE817A77F6B004EE1B2 /* ParamsMessage.h in CopyFiles */,
+				81334AE917A77F6B004EE1B2 /* PresenceMessage.h in CopyFiles */,
+				81334AEA17A77F6B004EE1B2 /* NotificationMessage.h in CopyFiles */,
 				4ED4CF66179E5B050088DF8F /* TextMessage.h in CopyFiles */,
 				81B59628174C644600E50482 /* Messaging.h in CopyFiles */,
 			);
@@ -71,6 +82,12 @@
 		4ED4CF62179E590E0088DF8F /* TextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextMessage.h; sourceTree = "<group>"; };
 		4ED4CF63179E590E0088DF8F /* TextMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextMessage.m; sourceTree = "<group>"; };
 		810285D0179E45AE00227AFD /* Utilities.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Utilities.xcodeproj; path = ../Utilities/Utilities.xcodeproj; sourceTree = "<group>"; };
+		81334ADA17A76D52004EE1B2 /* ParamsMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParamsMessage.h; sourceTree = "<group>"; };
+		81334ADB17A76D52004EE1B2 /* ParamsMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParamsMessage.m; sourceTree = "<group>"; };
+		81334AE117A776E8004EE1B2 /* PresenceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresenceMessage.h; sourceTree = "<group>"; };
+		81334AE217A776E9004EE1B2 /* PresenceMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresenceMessage.m; sourceTree = "<group>"; };
+		81334AE417A77891004EE1B2 /* NotificationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationMessage.h; sourceTree = "<group>"; };
+		81334AE517A77892004EE1B2 /* NotificationMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationMessage.m; sourceTree = "<group>"; };
 		81B5961F174C644600E50482 /* libMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B59622174C644600E50482 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		81B59626174C644600E50482 /* Messaging-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Messaging-Prefix.pch"; sourceTree = "<group>"; };
@@ -148,6 +165,12 @@
 				81B59627174C644600E50482 /* Messaging.h */,
 				81B59629174C644600E50482 /* Messaging.m */,
 				81B59625174C644600E50482 /* Supporting Files */,
+				81334ADA17A76D52004EE1B2 /* ParamsMessage.h */,
+				81334ADB17A76D52004EE1B2 /* ParamsMessage.m */,
+				81334AE117A776E8004EE1B2 /* PresenceMessage.h */,
+				81334AE217A776E9004EE1B2 /* PresenceMessage.m */,
+				81334AE417A77891004EE1B2 /* NotificationMessage.h */,
+				81334AE517A77892004EE1B2 /* NotificationMessage.m */,
 			);
 			path = Messaging;
 			sourceTree = "<group>";
@@ -304,6 +327,9 @@
 				81B5962A174C644600E50482 /* Messaging.m in Sources */,
 				4E0DF6E91797BE2B00733CD4 /* Message.m in Sources */,
 				4ED4CF64179E590E0088DF8F /* TextMessage.m in Sources */,
+				81334ADC17A76D53004EE1B2 /* ParamsMessage.m in Sources */,
+				81334AE317A776EB004EE1B2 /* PresenceMessage.m in Sources */,
+				81334AE617A77892004EE1B2 /* NotificationMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
